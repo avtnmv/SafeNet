@@ -74,38 +74,4 @@ modalOverlay.addEventListener('click', (e) => {
 
 
 
-// Аккордеон с плавным открытием/закрытием
-document.querySelectorAll('.accordion').forEach(acc => {
-  const header = acc.querySelector('.accordion-header');
-  const content = acc.querySelector('.accordion-content');
-
-  header.addEventListener('click', () => {
-    const isOpen = acc.classList.contains('open');
-
-    if (isOpen) {
-      // Устанавливаем точную высоту для плавного закрытия
-      content.style.height = content.scrollHeight + 'px';
-
-      // На следующий кадр меняем на 0, чтобы запустить transition
-      requestAnimationFrame(() => {
-        content.style.height = '0px';
-      });
-
-      acc.classList.remove('open');
-    } else {
-      // Для открытия задаём текущую высоту контента
-      content.style.height = content.scrollHeight + 'px';
-      acc.classList.add('open');
-
-      // По окончании анимации height сбрасываем на auto
-      content.addEventListener('transitionend', function handler(e) {
-        if (e.propertyName === 'height') {
-          content.style.height = 'auto';
-          content.removeEventListener('transitionend', handler);
-        }
-      });
-    }
-  });
-});
-
 

@@ -862,7 +862,8 @@ padding: 32px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  font-family: inherit;
+  font-family: var(--font-family-paragraph);
+  color: #000;
 }
 
 .contact__button:hover {
