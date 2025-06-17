@@ -339,6 +339,8 @@ nav a{
   margin-bottom: 24px;
   font-size: 28px;
   text-align: center;
+  font-family: var(--font-family-title);
+  text-transform: uppercase;
 }
 
 /* --- Form --- */

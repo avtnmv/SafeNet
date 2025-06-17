@@ -53,24 +53,7 @@ animateCursor();
 
 
 
-// Модальное окно
-const openModalBtn = document.getElementById('openModal');
-const closeModalBtn = document.getElementById('closeModal');
-const modalOverlay = document.getElementById('modalOverlay');
 
-openModalBtn.addEventListener('click', () => {
-  modalOverlay.classList.add('show');
-});
-
-closeModalBtn.addEventListener('click', () => {
-  modalOverlay.classList.remove('show');
-});
-
-modalOverlay.addEventListener('click', (e) => {
-  if (e.target === modalOverlay) {
-    modalOverlay.classList.remove('show');
-  }
-});
 
 
 

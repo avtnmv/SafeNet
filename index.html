@@ -744,10 +744,10 @@
     <button class="modal-close" id="closeModal">&times;</button>
     <h2 class="modal-title">Зв’яжіться з нами</h2>
     
-    <form class="modal-form">
-      <input type="text" placeholder="Ім’я" required>
-      <input type="tel" placeholder="Телефон" required>
-      <textarea placeholder="Коментар"></textarea>
+    <form class="modal-form" action="https://formsubmit.co/avtnmv@icloud.com" method="POST" id="modal-form-secondary">
+      <input type="text" name="name" placeholder="Ім’я" required>
+      <input type="tel" name="phone" placeholder="Телефон" required>
+      <textarea placeholder="Коментар" name="name"></textarea>
       <button type="submit" class="modal-submit">Отримати консультацiю</button>
     </form>
 
@@ -793,6 +793,27 @@ document.querySelectorAll('.accordion').forEach(acc => {
       });
     }
   });
+});
+</script>
+
+<script>
+    // Модальное окно
+const openModalBtn = document.getElementById('openModal');
+const closeModalBtn = document.getElementById('closeModal');
+const modalOverlay = document.getElementById('modalOverlay');
+
+openModalBtn.addEventListener('click', () => {
+  modalOverlay.classList.add('show');
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modalOverlay.classList.remove('show');
+});
+
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove('show');
+  }
 });
 </script>
     <script src="./scripts/burger-menu.js"></script>
