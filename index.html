@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeNet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+<header>
+  <nav class="nav container animate animate-left">
+    <a href="#" class="logo"><img src="./images/logo.svg" alt="Logo"></a>
+
+    <div class="nav__container">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="" class="nav__link">Про нас</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Всі послуги</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Питання</a></li>
+      </ul>
+    </div>
+
+    <div class="burger-menu" id="burger-menu">
+      <ul>
+        <li class="burger-link"><a href="#about-us">Про нас</a></li>
+        <div class="burger-hr"></div>
+        <li class="burger-link"><a href="#price">Всі послуги</a></li>
+        <div class="burger-hr"></div>
+        <li class="burger-link"><a href="#info">Питання</a></li>
+      </ul>
+    </div>
+
+    <div class="burger-icon" id="burger-icon">
+      <div class="burger-stick"></div>
+      <div class="burger-stick"></div>
+    </div>
+  </nav>
+
+  <div class="hero animate animate-up">
+    <div class="container">
+      <h1 class="hero__title animate animate-right">SafeNet Security</h1>
+      <p class="hero__subtitle animate animate-zoom">Кiбер та фiзична безпека</p>
+
+      <div class="hero__block animate animate-up">
+        <p class="hero__block-p">
+          Ми допомагаємо компаніям запобігати витокам даних, хакерським атакам та шпигунству. 
+          Дійте на випередження — замовте аудит безпеки вже сьогодні!
+        </p>
+        <a href="#" class="hero__cta animate animate-left">Отримати консультацію</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main class="about">
+<section class="container about__container animate animate-up">
+
+  <div class="about__text animate animate-left">
+    <h2 class="about__title animate animate-right">SafeNet Security – будуємо кібербезпеку.</h2>
+    <p class="about__description animate animate-up">
+      Безпека – це не витрати, а інвестиція у стабільність вашого бізнесу <br><br>
+      Ми допомагаємо бізнесу залишатися на крок попереду загроз. SafeNet Security – це команда експертів із кібербезпеки, які розробляють комплексні рішення для захисту компаній від атак, витоків даних і технічного шпигунства.
+    </p>
+  </div>
+
+  <div class="about__stats animate animate-zoom">
+
+    <div class="about__stat-group">
+      <div class="about__stat animate animate-up">
+        <p class="about__stat-value">82%</p>
+        <p class="about__stat-text">Більше не стикались із повторною атакою.</p>
+      </div>
+
+      <div class="about__stat animate animate-up" style="transition-delay: 0.2s">
+        <p class="about__stat-value">91%</p>
+        <p class="about__stat-text">Проблему закрили з першого разу.</p>
+      </div>
+    </div>
+
+    <div class="about__stat animate animate-up" style="transition-delay: 0.4s">
+      <p class="about__stat-value">86%</p>
+      <p class="about__stat-text">Зупинили спробу атаки до шкоди.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="tech">
+  <div class="container tech__container animate animate-up">
+    <h2 class="tech__title animate animate-right">Технічна безпека</h2>
+
+    <div class="tech__list">
+
+      <div class="tech__item animate animate-up" style="transition-delay: 0s">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Перевірка офісів, квартир та інших приміщень</p>
+          <p class="tech__description">Виявляємо шпигунські загрози та захищаємо простір від прослуховування та стеження.</p>
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="tech__item animate animate-up" style="transition-delay: 0.2s">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Перевірка на поліграфі</p>
+          <p class="tech__description">Допомагаємо виявити ризики до їх наслідків — точна перевірка персоналу в критичних ситуаціях.</p>
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="tech__item animate animate-up" style="transition-delay: 0.4s">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Захист транспорту від стеження</p>
+          <p class="tech__description">Знаходимо та нейтралізуємо пристрої стеження в авто, техніці та логістичних обʼєктах.</p>
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="security">
+  <div class="container">
+    <h2 class="security__title animate animate-right">Мінімум слів. <br>Максимум безпеки.</h2>
+    <p class="security__description animate animate-up" style="transition-delay: 0.1s">
+      Виявляємо загрози до їхнього виникнення, адаптуємо рішення під ваш бізнес і забезпечуємо безпеку без компромісів.
+    </p>
+
+    <div class="security__items">
+      <div class="security__item animate animate-up" style="transition-delay: 0.2s">
+        <p class="security__item-number">01</p>
+        <div class="card-container">
+          <img class="security__item-icon" src="./images/first-gif.gif" alt="">
+          <p class="security__item-title">Досвідчені експерти</p>
+          <p class="security__item-text">Наша команда — це сертифіковані фахівці з досвідом роботи з корпоративними та державними структурами, які запобігали реальним атакам.</p>
+        </div>
+      </div>
+
+      <div class="security__item animate animate-up" style="transition-delay: 0.4s">
+        <p class="security__item-number">02</p>
+        <div class="card-container">
+          <img class="security__item-icon" src="./images/second-gif.gif" alt="">
+          <p class="security__item-title">Комплексний підхід</p>
+          <p class="security__item-text">Ми закриваємо всі рівні загроз: технічні, організаційні та людські — від аудиту й налаштувань до навчання персоналу й моніторингу 24/7.</p>
+        </div>
+      </div>
+
+      <div class="security__item animate animate-up" style="transition-delay: 0.6s">
+        <p class="security__item-number">03</p>
+        <div class="card-container">
+          <img class="security__item-icon" src="./images/third-gif.gif" alt="">
+          <p class="security__item-title">Виявлення до атаки</p>
+          <p class="security__item-text">Ми виявляємо потенційні ризики ще до їх реалізації, впроваджуємо превентивний захист і знижуємо шанс атаки до мінімуму.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="solution container">
+  <h2 class="solution__title">Ідеальне рішення під ключ</h2>
+
+  <div class="solution__content">
+    <div class="solution__items">
+             <div class="tech__item">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Реагування на інциденти</p>
+          <p class="tech__description">Щвидке виявлення та усунення загроз, аналіз кібератак, відновлення даних та забезпечення надійного захисту після інциденту.</p>
+
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+        
+      </div>
+
+           <div class="tech__item">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Захист мереж та даних</p>
+          <p class="tech__description">Впровадження DDoS-захисту, VPN, Firewall та моніторинг загроз, щоб забезпечити безпечну роботу вашої компанії без ризику витоку даних.</p>
+
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+        
+      </div>
+
+           <div class="tech__item">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Безпека веб-ресурсів</p>
+          <p class="tech__description">Тестування веб-ресурсів на уразливості, впровадження WAF (Web Application Firewall) та захист від SQL-ін'єкцій і хакерських атак.</p>
+
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+        
+      </div>
+    </div>
+
+        <div class="solution__items">
+             <div class="tech__item">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Навчання персоналу</p>
+          <p class="tech__description">Тренінги, фішингові симуляції та практичні кейси, що допоможуть вашим співробітникам уникати кібератак та захистити бізнес від людського фактору.</p>
+
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+        
+      </div>
+
+           <div class="tech__item">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Аудит кібербезпеки</p>
+          <p class="tech__description">Повна перевірка вразливостей вашої системи, тестування на проникнення (пентест) та аналіз відповідності міжнародним стандартам безпеки (ISO, GDPR).</p>
+
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+        
+      </div>
+
+           <div class="tech__item">
+        <svg width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.839 25.433v17.133L34 51.134l-14.839-8.568V25.433L34 16.865z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><g filter="url(#a)"><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><g filter="url(#b)"><path d="m34 16 15.589 9v18L34 52l-15.588-9V25z" fill="#fff"/><path d="M48.464 25.65v16.7L34 50.7l-14.464-8.35v-16.7L34 17.298z" stroke="#fff" stroke-width="2.25" stroke-linejoin="round"/></g><defs><filter id="a" x="14.812" y="12.4" width="38.377" height="43.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1.8" result="effect1_foregroundBlur_3034_2181"/></filter><filter id="b" x="-19.088" y="-21.5" width="106.177" height="111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/></filter></defs></svg>
+        <div class="tech__content">
+          <p class="tech__name">Аудит офісів і житла</p>
+          <p class="tech__description">Перевірка офісів, авто та переговорних кімнат на наявність прослуховувальних пристроїв, виявлення прихованих камер та захист конфіденційної інформації.</p>
+
+          <a href="#" class="tech__link">Детальніше</a>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="benefits container">
+  <h2 class="benefits__title">Що ви отримуєте з нами</h2>
+
+  <!-- Старые flex ряды для десктопа -->
+  <div class="benefits__row-first">
+    <div class="benefits__item">
+      <img class="benefits__image" src="./images/benefits-first.png" alt="">
+    </div>
+    <div class="benefits__item">
+      <img class="benefits__image" src="./images/benefits-second.png" alt="">
+    </div>
+    <div class="benefits__item">
+      <img class="benefits__image" src="./images/benefits-third.png" alt="">
+    </div>
+  </div>
+
+  <div class="benefits__row-second">
+    <div class="benefits__item">
+      <img class="benefits__image" src="./images/benefits-fourth.png" alt="">
+    </div>
+    <div class="benefits__item">
+      <img class="benefits__image" src="./images/benefits-fifth.png" alt="">
+    </div>
+  </div>
+
+  <!-- Swiper слайды для мобилки -->
+  <div class="swiper benefits__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide benefits__item">
+        <img class="benefits__image" src="./images/benefits-first.png" alt="">
+      </div>
+      <div class="swiper-slide benefits__item">
+        <img class="benefits__image" src="./images/benefits-second.png" alt="">
+      </div>
+      <div class="swiper-slide benefits__item">
+        <img class="benefits__image" src="./images/benefits-third.png" alt="">
+      </div>
+      <div class="swiper-slide benefits__item">
+        <img class="benefits__image" src="./images/benefits-fourth.png" alt="">
+      </div>
+      <div class="swiper-slide benefits__item">
+        <img class="benefits__image" src="./images/benefits-fifth.png" alt="">
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section class="faq container">
+  <h2 class="faq__title">Поширенi запитання</h2>
+
+  <div class="accordion-wrapper">
+    <!-- Аккордеоны -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Що таке SafeNet Security?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>SafeNet Security — це професійна компанія у сфері комплексної безпеки, яка поєднує технічні інспекції, цифровий аудит та експертні перевірки перевірки персоналу із застосуванням поліграфа. Наші клієнти — фізичні та юридичні особи, які прагнуть мінімізувати ризики та захистити свої активи.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Які послуги ви надаєте?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>Ми пропонуємо три рівні захисту: <br>
+        – Базовий — VPN, базові налаштування безпеки. <br>
+        – Розширений — захист файлів, анти-трекинг, кіберзахист. <br>
+        – VIP-рівень — повна конфігурація, захист від IMSI-кетчерів, ізоляція середовища, конфіденційна консультація.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Скільки часу займає проведення перевірки?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>Стандартна перевірка займає від 24 до 48 годин залежно від обсягу даних і типу пристрою. Термінові перевірки виконуються швидше за окремим запитом.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Як залишити заявку та дізнатися вартість?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>Залишити заявку можна через форму на сайті або написавши нам у зручний месенджер. Після короткого брифу ми надамо точну вартість.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Чи гарантуєте ви конфіденційність?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>Так, вся інформація, передана нам, шифрується та не зберігається після завершення перевірки. Ми не запитуємо зайвих даних і дотримуємось політики нульового доступу.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>В яких регіонах ви працюєте?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>Ми працюємо по всій території України, а також можемо надавати послуги віддалено для клієнтів з інших країн за погодженням.</p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Чи передбачена термінова перевірка?</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5Z"/></svg>
+      </div>
+      <div class="accordion-content">
+        <p>Так, ми пропонуємо термінові перевірки з пріоритетною обробкою. Вартість такої послуги узгоджується окремо.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="devices-section container">
+  <div class="devices-header">
+    <h2 class="devices__title">Наші прилади</h2>
+    <div class="devices-nav">
+      <div class="devices-button-prev">&#8592;</div>
+      <div class="devices-button-next">&#8594;</div>
+    </div>
+  </div>
+
+  <div class="swiper2 devices-swiper container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./images/device-one.png" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/device-two.png" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/device-three.png" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/device-four.png" alt="" />
+      </div>
+
+            <div class="swiper-slide">
+        <img src="./images/device-five.png" alt="" />
+      </div>
+
+            <div class="swiper-slide">
+        <img src="./images/device-six.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="license-section">
+  <div class="license-section__container container">
+    <h2 class="license-section__title">Ліцензії</h2>
+
+    <div class="license-section__grid">
+      <div class="license-section__text">
+        <p>SafeNet Security працює відповідно до міжнародних стандартів кібербезпеки, що підтверджено сертифікаціями ISO 27001, GDPR Compliance, CEH та OSCP.</p>
+        <br>
+        <p>Ці сертифікації гарантують, що наші методи безпеки відповідають найвищим вимогам, а ваш бізнес отримає захист на рівні світових стандартів.</p>
+      </div>
+
+      <div class="license-section__column license-section__column--center">
+        <img src="./images/license-first.png" alt="Ліцензія 1" class="license-section__image" />
+        <img src="./images/license-second.png" alt="Ліцензія 2" class="license-section__image" />
+      </div>
+
+      <div class="license-section__column license-section__column--right">
+        <img src="./images/license-third.png" alt="Ліцензія 3" class="license-section__image" />
+      </div>
+    </div>
+    <div class="license-slider swiper container">
+        <p>SafeNet Security працює відповідно до міжнародних стандартів кібербезпеки, що підтверджено сертифікаціями ISO 27001, GDPR Compliance, CEH та OSCP.</p>
+        <br>
+        <p>Ці сертифікації гарантують, що наші методи безпеки відповідають найвищим вимогам, а ваш бізнес отримає захист на рівні світових стандартів.</p>
+        <br>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/license-first.png" alt="Ліцензія 1" /></div>
+        <div class="swiper-slide"><img src="./images/license-second.png" alt="Ліцензія 2" /></div>
+        <div class="swiper-slide"><img src="./images/license-third.png" alt="Ліцензія 3" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact container">
+  <h2 class="contact__title">Звʼяжімося та <br> зробімо краще</h2>
+  <form class="contact__form" action="https://formsubmit.co/your-email@example.com" method="POST" id="form-primary">
+    <input type="text" name="name" class="contact__input" placeholder="Ім’я" required>
+    <input type="tel" name="phone" class="contact__input" placeholder="Телефон" required>
+    <textarea name="comment" class="contact__textarea" placeholder="Коментар" required></textarea>
+    <button type="submit" class="contact__button">Отримати консультацію</button>
+  </form>
+</section>
+
+
+</main>
+
+
+<button class="floating-button" id="openModal">
+  <img src="./images/contact-button.svg" alt="Chat">
+</button>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeModal">&times;</button>
+    <h2 class="modal-title">Зв’яжіться з нами</h2>
+    
+    <form class="modal-form">
+      <input type="text" placeholder="Ім’я" required>
+      <input type="tel" placeholder="Телефон" required>
+      <textarea placeholder="Коментар"></textarea>
+      <button type="submit" class="modal-submit">Отримати консультацiю</button>
+    </form>
+
+    <div class="modal-icons">
+        <a href=""><img src="./images/inst.svg" alt="icon"></a>
+        <a href=""><img src="./images/gacebook.svg" alt="icon"></a>
+        <a href=""> <img src="./images/youtube.svg" alt="icon"></a>
+        <a href=""><img src="./images/tg.svg" alt="icon"></a>
+    </div>
+  </div>
+</div>
+
+    <script src="./scripts/burger-menu.js"></script>
+
+    <script>
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
+  const modalOverlay = document.getElementById('modalOverlay');
+
+  openModalBtn.addEventListener('click', () => {
+    modalOverlay.classList.add('show');
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    modalOverlay.classList.remove('show');
+  });
+
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.classList.remove('show');
+    }
+  });
+</script>
+
+<script>
+document.querySelectorAll('.accordion').forEach(acc => {
+  const header = acc.querySelector('.accordion-header');
+  const content = acc.querySelector('.accordion-content');
+
+  header.addEventListener('click', () => {
+    const isOpen = acc.classList.contains('open');
+
+    if (isOpen) {
+      // Устанавливаем точную текущую высоту (если она была auto)
+      content.style.height = content.scrollHeight + 'px';
+
+      // Пауза 1 кадр, чтобы браузер применил height
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+      });
+
+      acc.classList.remove('open');
+    } else {
+      // Устанавливаем начальную высоту
+      content.style.height = content.scrollHeight + 'px';
+      acc.classList.add('open');
+
+      // После завершения — сбрасываем height на auto
+      content.addEventListener('transitionend', function handler(e) {
+        if (e.propertyName === 'height') {
+          content.style.height = 'auto';
+          content.removeEventListener('transitionend', handler);
+        }
+      });
+    }
+  });
+});
+
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./scripts/slider.js"></script>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // убрать, если анимация однократная
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+</script>
+
+
+<img id="custom-cursor" src="./images/cursor.png" alt="cursor" />
+
+<script>
+  const cursor = document.getElementById('custom-cursor');
+
+  const cursorWidth = 87;
+  const cursorHeight = 99;
+
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
+
+  const offsetX = cursorWidth / 2;
+  const offsetY = cursorHeight / 2;
+
+  document.addEventListener('mousemove', (e) => {
+    // Чтобы центр изображения совпадал с курсором, вычитаем половину размеров
+    mouseX = e.clientX - offsetX;
+    mouseY = e.clientY - offsetY;
+  });
+
+  function animate() {
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+
+    cursor.style.left = `${currentX}px`;
+    cursor.style.top = `${currentY}px`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+</body>
+</html>
