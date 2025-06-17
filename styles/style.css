@@ -861,6 +861,227 @@ padding: 32px;
 
 
 
+
+
+/* Общие стили для animate и вариаций */
+.animate {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+  pointer-events: none; /* чтобы не мешали, пока скрыты */
+}
+
+/* Для вариантов с трансформацией — задаём начальный transform */
+.animate-left {
+  transform: translateX(-150px);
+}
+
+.animate-right {
+  transform: translateX(150px);
+}
+
+.animate-up {
+  transform: translateY(150px);
+}
+
+.animate-zoom {
+  transform: scale(0.8);
+}
+
+/* При появлении */
+.animate.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+
+/* fadeInUp с анимацией через keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.animate-fade-in-up.active {
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-delay: var(--delay, 0s);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+/* Курсор */
+#custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 360px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: filter 0.2s ease;
+  z-index: 9999;
+}
+
+/* Общие стили футера */
+.footer {
+  color: #fff;
+  font-family: var(--font-family-paragraph);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+/* Десктопная версия */
+.footer__desktop {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__column {
+  flex: 1 1 0;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Мобильная версия - скрыта по умолчанию */
+.footer__mobile {
+  display: none;
+}
+
+/* Первый ряд мобильной версии - лого+контакты и навигация в две колонки */
+.footer__mobile-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer__mobile-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Соцсети - центрируем на мобильных */
+.footer__mobile-socials {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+/* Блоки услуг и документов - полная ширина */
+.footer__mobile-services,
+.footer__mobile-docs {
+  margin-bottom: 20px;
+}
+
+/* Общие стили для обеих версий */
+.footer-column__title {
+  font-size: 28px;
+  margin: 0 0 16px 0;
+  color: #fff;
+}
+
+.footer-column__text,
+.footer-column__block p {
+  margin: 0;
+  color: #fff;
+}
+
+.footer-column__link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+}
+
+.footer-column__link:hover {
+  text-decoration: underline;
+}
+
+.footer-column__block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-column__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-column__logo {
+  width: 150px;
+  height: 50px;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-column__social-link img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.footer-column__text-gray {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+  .footer__desktop {
+    display: none;
+  }
+  
+  .footer__mobile {
+    display: block;
+  }
+  
+  .footer__mobile-row {
+    gap: 16px;
+  }
+  
+  .footer__mobile-col {
+    min-width: calc(50% - 8px);
+  }
+  
+  .footer-column__title {
+    font-size: 24px;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .footer__mobile-col {
+    min-width: 100%;
+  }
+  
+  .footer-column__title {
+    font-size: 22px;
+  }
+  
+  .footer {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 1070px) {
     .container{
       padding-left: 15px;
@@ -1048,61 +1269,3 @@ padding: 32px;
     flex-direction: column;
   }
 }
-
-/* Animations */
-
-/* Общие стили */
-.animate {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-
-.animate.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Уникальные анимации */
-.animate-left {
-  transform: translateX(-150px);
-}
-.animate-left.show {
-  transform: translateX(0);
-}
-
-.animate-right {
-  transform: translateX(150px);
-}
-.animate-right.show {
-  transform: translateX(0);
-}
-
-.animate-up {
-  transform: translateY(150px);
-}
-.animate-up.show {
-  transform: translateY(0);
-}
-
-.animate-zoom {
-  transform: scale(0.8);
-}
-.animate-zoom.show {
-  transform: scale(1);
-}
-
-
-
-
-  #custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    width: 360px;
-    height: 300px;
-    top: 0;
-    left: 0;
-     transform: translate(-50%, -50%);
-    transition: filter 0.2s ease;
-    z-index: 9999;
-  }
