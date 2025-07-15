@@ -1068,6 +1068,11 @@ padding: 32px;
   color: white;
 }
 
+
+.footer-column__services a:hover{
+  text-decoration: underline;
+}
+
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
   .footer__desktop {

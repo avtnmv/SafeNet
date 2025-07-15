@@ -798,6 +798,10 @@ background: linear-gradient(90deg, rgba(41, 59, 106, 0.43) 35.59%, rgba(178, 162
   color: white;
 }
 
+.footer-column__services a:hover{
+    text-decoration: underline;
+}
+
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
   .footer__desktop {
