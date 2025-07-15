@@ -8,19 +8,26 @@ const swiper = new Swiper('.benefits__swiper', {
 
 });
 
-  const swiper2 = new Swiper('.devices-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.devices-button-next',
-      prevEl: '.devices-button-prev',
+const swiper2 = new Swiper('.devices-swiper', {
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.devices-button-next',
+    prevEl: '.devices-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 3
-      }
+    480: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
     }
-  });
+  }
+});
+
+
 
     const licensesSlider =  new Swiper('.license-slider', {
     slidesPerView: 1,

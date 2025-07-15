@@ -63,6 +63,7 @@ body{
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-family-paragraph);
+  padding-bottom: 20px;
 }
 
 nav a{
@@ -793,7 +794,9 @@ background: linear-gradient(90deg, rgba(41, 59, 106, 0.43) 35.59%, rgba(178, 162
   pointer-events: auto;
 }
 
-
+.footer-column__services a{
+  color: white;
+}
 
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
@@ -830,6 +833,24 @@ background: linear-gradient(90deg, rgba(41, 59, 106, 0.43) 35.59%, rgba(178, 162
   
   .footer {
     font-size: 14px;
+  }
+  .hero-polygraf{
+    background-image: url(../images/polygraf-bg-mobile.webp);
+  }
+  .hero-audit-office{
+    background-image: url(../images/audit-office-mobile.webp);
+  }
+  .hero-cyber{
+    background-image: url(../images/hero-cyber-mobile.webp);
+  }
+  .hero-car{
+    background-image: url(../images/car-protect-mobile.webp);
+  }
+  .hero-incident{
+    background-image: url(../images/incident-mobile-bg.webp);
+  }
+  .hero-lan{
+    background-image: url();
   }
 }
 

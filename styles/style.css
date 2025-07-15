@@ -63,6 +63,7 @@ body{
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-family-paragraph);
+  padding-bottom: 20px;
 }
 
 nav a{
@@ -428,7 +429,7 @@ nav a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .tech__item {
@@ -525,6 +526,7 @@ padding: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 .security{
   margin-top: 120px;
@@ -574,6 +576,9 @@ padding: 32px;
   gap: 32px;
 }
 
+.benefits__swiper{
+  display: none !important;
+}
 
 .swiper-pagination {
   position: relative !important; 
@@ -605,6 +610,7 @@ padding: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
 }
 
 .solution__content{
@@ -724,6 +730,7 @@ padding: 32px;
   height: 100%;
 }
 
+
 .devices__title{
   font-size: var(--font-size-title);
   color: white;
@@ -791,11 +798,6 @@ padding: 32px;
   width: 100%;
   height: auto;
   border-radius: 8px;
-}
-
-
-.license-slider {
-  display: none;
 }
 
 .license-slider img {
@@ -1035,7 +1037,7 @@ padding: 32px;
 
 .footer-column__socials {
   display: flex;
-  gap: 16px;
+
 }
 
 .footer-column__logo {
@@ -1049,6 +1051,7 @@ padding: 32px;
   width: 50px;
   height: 50px;
   display: block;
+  margin-right: 16px;
 }
 
 .footer-column__text-gray {
@@ -1057,9 +1060,13 @@ padding: 32px;
 
 
 
+.license-slider {
+  display: none !important;
+}
 
-
-
+.footer-column__services a{
+  color: white;
+}
 
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
@@ -1082,6 +1089,10 @@ padding: 32px;
   .footer-column__title {
     font-size: 24px;
   }
+  .benefits__swiper{
+  display: block !important;
+}
+
 }
 
 /* Адаптация для очень маленьких экранов */
@@ -1097,6 +1108,9 @@ padding: 32px;
   .footer {
     font-size: 14px;
   }
+    .hero{
+      background-image: url(../images/hero-mobile-bg.webp);
+    }
 }
 
 @media (max-width: 1070px) {
@@ -1247,9 +1261,6 @@ padding: 32px;
     display: none;
   }
 
-  .benefits__swiper {
-    display: block;
-  }
 
   .benefits__image {
     width: 100%;
@@ -1274,16 +1285,6 @@ padding: 32px;
   
 }
 
-@media (min-width: 1675px) {
-  /* На десктопе скрываем слайдер */
-  .benefits__swiper {
-    display: none !important;
-  }
-  .swiper{
-    display: none !important;
-  }
-}
-
 
 
 /* Мобилка */
@@ -1291,9 +1292,10 @@ padding: 32px;
   .license-section__grid {
     display: none;
   }
+  
 
   .license-slider {
-    display: block;
+    display: block !important;
   }
   .license-section{
     margin-top: 64px;
