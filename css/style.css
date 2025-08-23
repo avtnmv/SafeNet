@@ -720,14 +720,14 @@ body{
     position: absolute;
     left: 0;
     width: 106%;
-    height: 80%;
-    background: linear-gradient(0deg, rgba(29, 34, 68, 0.1) 0%, #3D4893 380%);
+    height: 60%;
+    background: linear-gradient(0deg, rgba(29, 34, 68, 0.1) 0%, #3D4893 544%);
     filter: blur(120px);
     transform: rotate(-180deg);
     z-index: -1;
     pointer-events: none;
-    bottom: 80px;
-  }
+    bottom: 186px;
+}
 
 .our-mission__container{
     max-width: 560px;
