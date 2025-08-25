@@ -2,19 +2,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq__item');
     
-    console.log('FAQ items found:', faqItems.length); // Отладка
-    
     faqItems.forEach((item, index) => {
         const header = item.querySelector('.faq__header');
         const content = item.querySelector('.faq__content');
         const answer = item.querySelector('.faq__answer');
         
-        console.log(`FAQ item ${index}:`, { header, content, answer }); // Отладка
-        
         if (header && content && answer) {
             header.addEventListener('click', function() {
-                console.log(`FAQ item ${index} clicked`); // Отладка
-                
                 const isActive = item.classList.contains('active');
                 
                 // Закрываем все остальные элементы
@@ -34,12 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Переключаем текущий элемент
                 if (isActive) {
-                    console.log('Closing FAQ item'); // Отладка
                     item.classList.remove('active');
                     content.style.maxHeight = '0px';
                     header.style.paddingBottom = '30px'; // Возвращаем обычный padding
                 } else {
-                    console.log('Opening FAQ item'); // Отладка
                     item.classList.add('active');
                     
                     // Меняем padding-bottom заголовка на 16px для имитации gap
@@ -54,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(() => {
                         content.style.maxHeight = scrollHeight + 'px';
                     }, 10);
-                    
-                    console.log('Content height:', scrollHeight); // Отладка
                 }
             });
         }

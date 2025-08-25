@@ -937,19 +937,6 @@ padding: 32px;
 
 
 
-/* Курсор */
-#custom-cursor {
-  position: fixed;
-  pointer-events: none;
-  width: 360px;
-  height: 300px;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  transition: filter 0.2s ease;
-  z-index: 9999;
-}
-
 /* Общие стили футера */
 .footer {
   color: #fff;
@@ -1309,4 +1296,10 @@ padding: 32px;
   .contact{
     flex-direction: column;
   }
+}
+
+.ytp-large-play-button-red-bg .ytp-large-play-button-bg {
+  fill: transparent !important;
+  fill-opacity: 1 !important;
+  border: 1px solid green !important;
 }

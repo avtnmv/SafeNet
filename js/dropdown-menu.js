@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navList = document.querySelector('.nav-list');
 
     if (!dropdownTrigger || !dropdownMenu || !navItemLineContainer || !navList) {
-        console.error('Dropdown elements not found');
         return;
     }
 
