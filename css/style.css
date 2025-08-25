@@ -103,7 +103,6 @@ body{
 }
 
 .container{
-    max-width: var(--container-width);
     margin: auto;
     padding-inline: clamp(24px, 5vw, 64px);
     position: relative;
