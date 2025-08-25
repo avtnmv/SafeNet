@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Планшеты
             768: {
                 slidesPerView: 2,
-                spaceBetween: 24,
+                spaceBetween: 20,
             },
             // Десктоп
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 32,
+                spaceBetween: 20,
             }
         },
         
