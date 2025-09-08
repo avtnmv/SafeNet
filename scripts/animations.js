@@ -1,16 +1,11 @@
-// IntersectionObserver для анимаций при появлении элементов в viewport
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Добавляем класс для запуска анимации
-      entry.target.classList.add('active'); // для .animate-fade-in-up
+      entry.target.classList.add('active');
 
-      // Если у тебя другие классы для анимации, можно проверить и добавить их здесь
       if (entry.target.classList.contains('animate')) {
         entry.target.classList.add('show');
       }
-
-      // Если анимация однократная — перестаём наблюдать
       observer.unobserve(entry.target);
     }
   });
@@ -18,12 +13,8 @@ const observer = new IntersectionObserver((entries, observer) => {
   threshold: 0.2
 });
 
-// Наблюдаем за элементами с классом .animate и .animate-fade-in-up
 document.querySelectorAll('.animate, .animate-fade-in-up').forEach(el => observer.observe(el));
 
-
-
-// Курсор с плавным следованием
 const cursor = document.getElementById('custom-cursor');
 const cursorWidth = 87;
 const cursorHeight = 99;
@@ -50,6 +41,7 @@ function animateCursor() {
 }
 
 animateCursor();
+
 
 
 

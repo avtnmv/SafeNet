@@ -1,4 +1,4 @@
-// FAQ функциональность
+
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq__item');
     
@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
             header.addEventListener('click', function() {
                 const isActive = item.classList.contains('active');
                 
-                // Закрываем все остальные элементы
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
@@ -21,28 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
                             otherContent.style.maxHeight = '0px';
                         }
                         if (otherHeader) {
-                            otherHeader.style.paddingBottom = '30px'; // Возвращаем обычный padding
+                            otherHeader.style.paddingBottom = '30px';
                         }
                     }
                 });
                 
-                // Переключаем текущий элемент
                 if (isActive) {
                     item.classList.remove('active');
                     content.style.maxHeight = '0px';
-                    header.style.paddingBottom = '30px'; // Возвращаем обычный padding
+                    header.style.paddingBottom = '30px';
                 } else {
                     item.classList.add('active');
                     
-                    // Меняем padding-bottom заголовка на 16px для имитации gap
                     header.style.paddingBottom = '16px';
                     
-                    // Временно показываем контент для измерения высоты
                     content.style.maxHeight = 'none';
                     const scrollHeight = content.scrollHeight;
                     content.style.maxHeight = '0px';
                     
-                    // Устанавливаем правильную высоту с небольшой задержкой
                     setTimeout(() => {
                         content.style.maxHeight = scrollHeight + 'px';
                     }, 10);

@@ -41,7 +41,7 @@
 </head>
 <body>
 
-    <header>
+<header>
   <nav class="nav container">
     <a href="../index.html" class="logo"><img src="../images/logo.webp" alt="Logo" width="150px" height="45px"></a>
 
@@ -117,7 +117,6 @@
 <section class="benefits container animate animate-up">
   <h2 class="benefits__title">Що ви отримуєте з нами</h2>
 
-  <!-- Старые flex ряды для десктопа -->
   <div class="benefits__row-first">
     <div class="benefits__item ">
       <img class="benefits__image" src="../images/benefits-first.png" alt="">
@@ -139,7 +138,6 @@
     </div>
   </div>
 
-  <!-- Swiper слайды для мобилки -->
   <div class="swiper benefits__swiper">
     <div class="swiper-wrapper animate animate-up">
       <div class="swiper-slide benefits__item">
@@ -211,7 +209,6 @@
 </section>
 
 <footer class="footer container">
-  <!-- Десктопная версия -->
   <div class="footer__inner footer__desktop">
     <div class="footer__column footer-column">
       <a href="#" class="footer-column__logo-link">
@@ -293,9 +290,7 @@
     </div>
   </div>
 
-  <!-- Мобильная версия -->
   <div class="footer__mobile">
-    <!-- Первый ряд - лого и контакты + навигация -->
     <div class="footer__mobile-row">
       <div class="footer__mobile-col">
         <a href="#" class="footer-column__logo-link">
@@ -330,7 +325,6 @@
       </div>
     </div>
 
-    <!-- Второй ряд - соцсети -->
     <div class="footer__mobile-socials">
       <div class="footer-column__socials">
         <a href="https://www.instagram.com/safe.net.security?igsh=eTlybjZtbHBnaTFh" class="footer-column__social-link">
@@ -348,7 +342,6 @@
       </div>
     </div>
 
-    <!-- Третий ряд - услуги -->
     <div class="footer__mobile-services">
       <p class="footer-column__title">Послуги:</p>
       <div class="footer-column__block footer-column__services">
@@ -363,7 +356,6 @@
       </div>
     </div>
 
-    <!-- Четвертый ряд - документы -->
     <div class="footer__mobile-docs">
       <p class="footer-column__title">
         Підприємство діє у рамках чинного законодавства України:
@@ -412,29 +404,29 @@
 
 
 <script>
-    // Модальное окно
-const openModalBtn = document.getElementById('openModal');
-const closeModalBtn = document.getElementById('closeModal');
-const modalOverlay = document.getElementById('modalOverlay');
+    const openModalBtn = document.getElementById('openModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('modalOverlay');
 
-openModalBtn.addEventListener('click', () => {
-  modalOverlay.classList.add('show');
-});
+    openModalBtn.addEventListener('click', () => {
+      modalOverlay.classList.add('show');
+    });
 
-closeModalBtn.addEventListener('click', () => {
-  modalOverlay.classList.remove('show');
-});
+    closeModalBtn.addEventListener('click', () => {
+      modalOverlay.classList.remove('show');
+    });
 
-modalOverlay.addEventListener('click', (e) => {
-  if (e.target === modalOverlay) {
-    modalOverlay.classList.remove('show');
-  }
-});
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('show');
+      }
+    });
 </script>
+
     <script src="../scripts/burger-menu.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="../scripts/slider.js"></script>
-<script src="../scripts/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../scripts/slider.js"></script>
+    <script src="../scripts/animations.js"></script>
 
 
 </body>

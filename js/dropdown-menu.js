@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Burger Dropdown Menu
     const burgerDropdownTrigger = document.getElementById('burger-dropdown-trigger');
     const burgerDropdownMenu = document.getElementById('burger-dropdown-menu');
     const burgerNavItemLineContainer = document.querySelector('.burger-nav-item-line-container');
@@ -74,19 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             toggleBurgerDropdown();
         });
-
-        // Button already doesn't navigate, no need to prevent default for button
     }
 
-    // Close all dropdowns on window resize (desktop/mobile switch)
     window.addEventListener('resize', () => {
         if (window.innerWidth > 1124) {
-            // Close main dropdown
             if (isDropdownOpen) {
                 toggleDropdown();
             }
         } else {
-            // Close burger dropdown when switching to mobile
             if (burgerDropdownTrigger && isBurgerDropdownOpen) {
                 toggleBurgerDropdown();
             }
