@@ -377,4 +377,12 @@
     .process-text p {
         text-align: center;
     }
+    .card-content h3{
+        max-width: 220px;
+    }
+    .polygraph-title{
+        max-width: 260px;
+        margin: auto;
+        margin-bottom: 32px;
+    }
 }
