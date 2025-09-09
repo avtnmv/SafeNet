@@ -3,431 +3,696 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аудит офісів і житла</title>
+    <title>Аудит офісів і житла - Safe Net</title>
+    <link rel="stylesheet" href="../css/office-check.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
 
-
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
-  <link rel="mask-icon" href="./images/favicon.svg" color="#5bbad5">
-
-    <link rel="stylesheet" href="../styles/style-pages.css">
-        <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-<!-- Meta Pixel Code -->
 <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '4183670531952731');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=4183670531952731&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4183670531952731');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4183670531952731&ev=PageView&noscript=1"
+    /></noscript>
+
 </head>
 <body>
+    <header class="header container">
+        <div class="video-background">
+            <img src="../images/office-check-bg.webp" alt="Background" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-container">
+                    <svg width="58" height="82" viewBox="0 0 58 82" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.273.001c.241-.054 1.29 1.533 1.447 1.817 1.843 3.353 1.142 7.27-1.518 9.964L8.62 35.014a13.36 13.36 0 0 0 6.151 5.407l19.607-19.202c10.678-8.045 25.732.688 23.376 13.933-.931 5.23-4.665 8.25-8.258 11.775 3.218 3.084 3.27 8.212.264 11.46L25.679 82c-3.144-3.066-3.17-8.186-.22-11.384L49.363 46.93c-.957-1.642-2.52-3.206-4.109-4.283-.33-.224-1.816-1.178-2.094-1.064-5.238 5.167-10.471 10.337-15.72 15.493-3.496 3.433-5.826 6.115-11.157 6.705C2.989 65.248-5.068 49.93 3.608 39.959c.621-.714 4.72-4.447 4.807-4.776.056-.21-.883-1.264-1.097-1.61-1.93-3.121-1.61-6.875.711-9.69zm10.194 26.324c-.994.126-2.234.712-3.006 1.332-4.461 4.003-8.502 8.922-13.002 12.83-2.838 2.466-6.344 3.277-9.824 1.478-.45-.232-1.716-1.309-1.824-1.337-.154-.04-.267 0-.376.11-2.03 2.356-5.725 4.605-6.119 7.895-.698 5.816 5.908 9.283 10.487 5.522 4.58-3.762 8.671-9.31 13.267-13.087 2.808-2.307 6.629-2.667 9.776-.785.439.264 1.044.916 1.317 1.054.103.052.164.086.261 0 3.039-3.366 8.042-5.999 5.791-11.314-1.132-2.677-3.84-4.062-6.748-3.694z" fill="#fff"/></svg>
+                </div>
+            </a>
 
-<header>
-  <nav class="nav container">
-    <a href="../index.html" class="logo"><img src="../images/logo.webp" alt="Logo" width="150px" height="45px"></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item nav-item-active dropdown" id="dropdown-trigger">
+                        <div class="nav-item-line-container">
+                            <span class="nav-item-line"></span>
+                            <span class="nav-item-line"></span>
+                            <span class="nav-item-line"></span>
+                        </div>
+                        <button class="nav-link nav-link-active">Всі послуги</button>
+                    </li>
 
-    <div class="nav__container">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#about" class="nav__link">Що ви отримуєте</a></li>
-        <li class="nav__item"><a href="#work" class="nav__link">Етапи роботи</a></li>
-        <li class="nav__item"><a href="#contacts" class="nav__link">Контакти</a></li>
-      </ul>
-    </div>
+                    <li class="nav-item"><a href="../index.html#about" class="nav-link">Про нас</a></li>
+                    <li class="nav-item"><a href="../index.html#faq" class="nav-link">Питання</a></li>
+                    <li class="nav-item"><a href="../index.html#contacts" class="nav-link">Контакти</a></li>
+                </ul>
+            </nav>
 
-    <div class="burger-menu" id="burger-menu">
-      <ul>
-        <li class="burger-link"><a href="#about">Що ви отримуєте</a></li>
-        <div class="burger-hr"></div>
-        <li class="burger-link"><a href="#work">Етапи роботи</a></li>
-        <div class="burger-hr"></div>
-        <li class="burger-link"><a href="#contacts">Контакти</a></li>
-      </ul>
-    </div>
-
-    <div class="burger-icon" id="burger-icon">
-      <div class="burger-stick"></div>
-      <div class="burger-stick"></div>
-    </div>
-  </nav>
-
-  <div class="hero-office animate animate-up">
-    <div class="container">
-      <h1 class="hero__title">Аудит офісів і житла</h1>
-      <div class="hero__block">
-        <div class="hero__block-p">
-            <div class="hero__block-p-one">
-                <p>Аналіз системи безпеки об’єкта</p>
-                <p>01</p>
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    <li><a href="./audit-cyber.html" class="dropdown-link">Аудит та аналіз кібербезпеки</a></li>
+                    <li><a href="./incident-react.html" class="dropdown-link">Реагування на інциденти та кризові ситуації</a></li>
+                    <li><a href="./web-security.html" class="dropdown-link">Захист веб-додатків і сайтів</a></li>
+                    <li><a href="./polygraf.html" class="dropdown-link">Перевірка на поліграфі</a></li>
+                    <li><a href="./lan-protect.html" class="dropdown-link">Захист мереж та даних</a></li>
+                    <li><a href="./car-protect.html" class="dropdown-link">Захист транспорту від стеження</a></li>
+                </ul>
             </div>
 
-            <div class="hr"></div>
-
-            <p class= "hero__block-p-two">Оцінюємо захищеність: входи, відеонагляд, охоронні зони.</p>
-        </div>
-
-        <div class="hero__block-p">
-            <div class="hero__block-p-one">
-                <p>Виявлення вразливих точок</p>
-                <p>02</p>
+            <div class="cta-btn-container">
+                <a href="#consultation" class="cta-btn">Отримати консультацію</a>
             </div>
 
-            <div class="hr"></div>
-
-            <p class= "hero__block-p-two">Рекомендації щодо фізичних, електронних і організаційних заходів.</p>
-        </div>
-
-        <div class="hero__block-p">
-            <div class="hero__block-p-one">
-                <p>Розробка рішень для захисту</p>
-                <p>03</p>
+            <div class="burger-menu" id="burger-menu">
+                <ul>
+                    <li class="burger-hr"></li>
+                    <li class="burger-link burger-dropdown" id="burger-dropdown-trigger">
+                        <div class="burger-nav-item-container">
+                            <div class="burger-nav-item-line-container">
+                                <span class="burger-nav-item-line"></span>
+                                <span class="burger-nav-item-line"></span>
+                                <span class="burger-nav-item-line"></span>
+                            </div>
+                            <button>Всі послуги</button>
+                        </div>
+                        <div class="burger-dropdown-menu" id="burger-dropdown-menu">
+                            <ul>
+                                <li><a href="./audit-cyber.html" class="burger-dropdown-link">
+                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
+                                    Аудит та аналіз кібербезпеки
+                                </a></li>
+                                <li><a href="./incident-react.html" class="burger-dropdown-link">
+                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
+                                    Реагування на інциденти та кризові ситуації
+                                </a></li>
+                                <li><a href="./web-security.html" class="burger-dropdown-link">
+                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
+                                    Захист веб-додатків і сайтів
+                                </a></li>
+                                <li><a href="./polygraf.html" class="burger-dropdown-link">
+                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
+                                    Перевірка на поліграфі
+                                </a></li>
+                                <li><a href="./lan-protect.html" class="burger-dropdown-link">
+                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
+                                    Захист мереж та даних
+                                </a></li>
+                                <li><a href="./car-protect.html" class="burger-dropdown-link">
+                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
+                                    Захист транспорту від стеження
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="burger-hr"></li>
+                    <li class="burger-link"><a href="../index.html#about">Про нас</a></li>
+                    <li class="burger-hr"></li>
+                    <li class="burger-link"><a href="../index.html#faq">Питання</a></li>
+                    <li class="burger-hr"></li>
+                    <li class="burger-link"><a href="../index.html#contacts">Контакти</a></li>
+                    <li class="burger-hr"></li>
+                </ul>
             </div>
 
-            <div class="hr"></div>
+            <div class="burger-icon" id="burger-icon">
+                <div class="burger-stick"></div>
+                <div class="burger-stick"></div>
+            </div>
+        </div>
+            
+        <div class="header-content">
+            <h1 class="header-title">Аудит офісів<br>і житла від професіоналів</h1>
+            <p class="header-description">Перевіряємо приміщення на прослуховування, приховані камери та підключення до мереж. Даємо конкретні рішення, щоб зробити об'єкт недосяжним для зловмисників</p>
 
-            <p class= "hero__block-p-two">Нейтральний спосіб з’ясування правди у спірних питаннях між співробітниками чи з контрагентами.</p>
+            <div class="header-cta-btn-container">
+                <a href="#consultation" class="header-cta-btn header-cta-btn-hero">
+                    Отримати консультацію
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M8 8v2.667h11.453L6.667 23.453l1.88 1.88 12.786-12.786V24H24V8z" fill="#fff"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Audit Section -->
+    <section class="why-audit-section section-margin">
+        <div class="container">
+            <div class="why-audit-blocks">
+                <div class="why-audit-title-block">
+                    <h2 class="why-audit-title">Чому аудит потрібен<br>саме зараз?</h2>
+                </div>
+
+                <div class="card" data-card="1">
+                    <div class="card-image">
+                        <img src="../images/why-audit1.webp" alt="Витік конфіденційної інформації">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>Витік конфіденційної інформації</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_543_2050)">
+                                    <rect y="0.0546875" width="48" height="48" rx="24" fill="#9B54FF"/>
+                                    <path d="M32 17.2855L29.5385 17.2855L29.5385 27.8578L17.7354 16.0547L16 17.7901L27.8031 29.5931L17.2308 29.5931L17.2308 32.0547L32 32.0547L32 17.2855Z" fill="#F0F0F0"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_543_2050">
+                                        <rect y="0.0546875" width="48" height="48" rx="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p>Це не тільки втрата контрактів, а й репутації. Бізнес може постраждати від незаконного доступу до стратегічних даних</p>
+                    </div>
+                </div>
+
+                <div class="card" data-card="2">
+                    <div class="card-image">
+                        <img src="../images/why-audit2.webp" alt="Приховані камери й прослуховування">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-text">
+                            <h3>Приховані камери й прослуховування</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_543_2050)">
+                                    <rect y="0.0546875" width="48" height="48" rx="24" fill="#9B54FF"/>
+                                    <path d="M32 17.2855L29.5385 17.2855L29.5385 27.8578L17.7354 16.0547L16 17.7901L27.8031 29.5931L17.2308 29.5931L17.2308 32.0547L32 32.0547L32 17.2855Z" fill="#F0F0F0"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_543_2050">
+                                        <rect y="0.0546875" width="48" height="48" rx="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p>Загроза для приватного життя, яка може призвести до серйозних юридичних та фінансових наслідків</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section section-margin">
+        <div class="container">
+            <h2 class="advantages-title fade-in">ЩО МИ РОБИМО</h2>
+            
+            <div class="advantages-cards">
+                <div class="advantage-card fade-in-left">
+                    <div class="advantage-number">//01</div>
+                    <div class="advantage-content">
+                        <h3>Готуємо план перевірки під ваш об’єкт</h3>
+                        <p>Час, доступи, формат «відкрито» або приховано. Це дозволяє провести роботи непомітно для оточення</p>
+                    </div>
+                    <div class="advantage-image">
+                        <img src="../images/office-advantages1.webp" alt="Легальність">
+                    </div>
+                </div>
+
+                <div class="advantage-card fade-in-left">
+                    <div class="advantage-number">//02</div>
+                    <div class="advantage-content">
+                        <h3>Перевіряємо «критичні місця» приміщення</h3>
+                        <p>Оглядаємо простір, меблі, розетки, кабельні/слабкострумні лінії, а також шукаємо ознаки прихованих камер чи жучків</p>
+                    </div>
+                    <div class="advantage-image">
+                        <img src="../images/office-advantages2.webp" alt="Точність">
+                    </div>
+                </div>
+
+                <div class="advantage-card fade-in-left">
+                    <div class="advantage-number">//03</div>
+                    <div class="advantage-content">
+                        <h3>Розробка рекомендацій</h3>
+                        <p>Надаємо конкретний план з усунення вразливостей без встановлення нових систем, але з акцентом на організаційні та фізичні заходи безпеки</p>
+                    </div>
+                    <div class="advantage-image">
+                        <img src="../images/office-advantages3.webp" alt="Конфіденційність">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section section-margin">
+        <div class="container">
+            <h2 class="process-title fade-in">Як це відбувається</h2>
+            
+            <div class="process-cards">
+                <div class="process-card fade-in-up">
+                    <div class="process-image">
+                        <img src="../images/office-how-it-work1.webp" alt="Підготовка">
+                    </div>
+                    <div class="process-content">
+                        <h3>Підготовка</h3>
+                        <p>Наш фахівець детально розповість Вам, як відбуватиметься перевірка, а також надасть усі необхідні документи</p>
+                    </div>
+                </div>
+
+                <div class="process-card fade-in-up">
+                    <div class="process-image">
+                        <img src="../images/office-how-it-work2.webp" alt="Перевірка на місці">
+                    </div>
+                    <div class="process-content">
+                        <h3>Перевірка на місці</h3>
+                        <p>Поетапно оглядаємо приміщення, виявляємо приховані камери/мікрофони, «слухаємо» комунікації, фіксуємо підозрілі ознаки</p>
+                    </div>
+                </div>
+
+                <div class="process-card fade-in-up">
+                    <div class="process-image">
+                        <img src="../images/office-how-it-work3.webp" alt="Підсумок">
+                    </div>
+                    <div class="process-content">
+                        <h3>Підсумок</h3>
+                        <p>Встановлюємо невидимі мітки (за потреби) та готуємо офіційний акт і прості рекомендації, що робити далі</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section section-margin">
+        <div class="container">
+            <div class="results-grid">
+                <div class="results-title-block">
+                    <h2 class="results-title">Що ви отримуєте після аудиту?</h2>
+                </div>
+                
+                <div class="results-cards">
+                    <div class="result-card">
+                        <div class="result-image">
+                            <img src="../images/result1.webp" alt="Офіційний акт/звіт">
+                        </div>
+                        <div class="result-content">
+                            <h3>Офіційний акт/звіт</h3>
+                            <p>Підписаний із переліком виконаних робіт та застосованих приладів (із заводськими номерами). Документ підтверджує, що перевірка проведена належно</p>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-image">
+                            <img src="../images/result2.webp" alt="Конфіденційність процесу">
+                        </div>
+                        <div class="result-content">
+                            <h3>Конфіденційність процесу</h3>
+                            <p>Ваша інформація та результати перевірок залишаються виключно між вами і нами, гарантуючи відсутність будь-яких витоків чи розголошення</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-cards-second">
+                    <div class="result-card">
+                        <div class="result-image">
+                            <img src="../images/result3.webp" alt="Спокій і впевненість">
+                        </div>
+                        <div class="result-content">
+                            <h3>Спокій і впевненість</h3>
+                            <p>Ми гарантуємо, що ваші приміщення перевірені на наявність будь-яких загроз, що дозволяє вам бути впевненими в повній безпеці вашого бізнесу чи приватного життя</p>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-image">
+                            <img src="../images/result4.webp" alt="Юридично коректний план дій">
+                        </div>
+                        <div class="result-content">
+                            <h3>Юридично коректний план дій</h3>
+                            <p>Якщо щось знайдено: коли і як повідомляти компетентні органи, як безпечно вилучати або знищувати пристрій за актом і як відзвітувати</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="when-contact-section section-margin">
+        <div class="container">
+            <div class="when-contact-grid">
+                <div class="when-contact-title-block">
+                    <h2 class="when-contact-title">Коли звертатися?</h2>
+                </div>
+                
+                <div class="when-contact-content">
+                    <div class="when-contact-image">
+                        <img src="../images/office-when-contact.webp" alt="Коли звертатися">
+                    </div>
+                    
+                    <div class="when-contact-cards">
+                        <div class="when-contact-card">
+                            <div class="when-contact-number">//01</div>
+                            <div class="when-contact-text">
+                                <h3>Профілактично</h3>
+                                <p>Після ремонту, візитів підрядників чи сторонніх осіб, за появи «дивних ознак» у приміщенні або лініях зв'язку</p>
+                            </div>
+                        </div>
+
+                        <div class="when-contact-card">
+                            <div class="when-contact-number">//02</div>
+                            <div class="when-contact-text">
+                                <h3>Планово</h3>
+                                <p>Перед важливими зустрічами/перемовинами або за графіком кібер‑ та фізбезпеки</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Pricing Section -->
+    <section class="audit-pricing-section section-margin">
+        <div class="container">
+            <div class="audit-pricing-grid">
+                <div class="audit-pricing-title-block">
+                    <h2 class="audit-pricing-title">Аудит офісів і приміщень</h2>
+                </div>
+                
+                <div class="audit-pricing-content">
+                    <div class="audit-pricing-list">
+                        <h3>Що входить у вартість</h3>
+                        <ul>
+                            <li>План робіт і підготовка</li>
+                            <li>Активаційні тести</li>
+                            <li>Пошук прихованих камер</li>
+                            <li>Аналіз і локалізація радіосигналів</li>
+                            <li>Перевірка дротових ліній</li>
+                            <li>Неруйнівний контроль і візуальний/фізичний огляд «критичних місць» приміщення</li>
+                            <li>Офіційний акт/звіт із переліком виконаних робіт</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="audit-pricing-info">
+                        <div class="pricing-row">
+                            <div class="old-price-container">
+                                <span class="old-price">$12-9 за м²</span>
+                                <p class="pricing-note">(в залежності від квадратури)</p>
+                            </div>
+                            <span class="new-price">$9-6 за м²</span>
+                        </div>
+                        <button class="pricing-btn pricing-btn-full">Замовити аудит</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section section-margin">
+        <div class="container">
+            <h2 class="why-choose-title">Чому обирають нас?</h2>
+            
+            <div class="why-choose-cards">
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="../images/office-why-choose1.webp" alt="Кваліфікована команда">
+                    </div>
+                    <div class="why-choose-content">
+                        <h3>Кваліфікована команда</h3>
+                        <p>Фахівці з профільною освітою та досвідом від 5 років у галузі захисту інформації</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="../images/office-why-choose2.webp" alt="Другий блок">
+                    </div>
+                    <div class="why-choose-content">
+                        <h3>Офіційність і легальність</h3>
+                        <p>Працюємо за методикою, погодженою державною службою, і затвердженою керівництвом компанії</p>
+                    </div>
+                </div>
+
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="../images/office-why-choose3.webp" alt="Третій блок">
+                    </div>
+                    <div class="why-choose-content">
+                        <h3>Професійний пошук загроз</h3>
+                        <p>Ми використовуємо спеціалізоване обладнання для пошуку прихованих пристроїв і підозрілих сигналів</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq container" id="faq">
+        <h2 class="faq__title">Поширені запитання</h2>
+        
+        <div class="faq__items">
+            <div class="faq__item">
+                <div class="faq__header">
+                    <h3 class="faq__question">Що саме перевіряєте?</h3>
+                    <svg class="faq__arrow" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.82.18 12 9.34 21.18.18 24 3 12 15 0 3z" fill="#9B54FF"/></svg>
+                </div>
+                <div class="faq__content">
+                    <p class="faq__answer">Приміщення, меблі, «начинку» розеток і коробок, телефонні/слабкострумні лінії, місця потенційного прихованого встановлення пристроїв</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__header">
+                    <h3 class="faq__question">Що входить у звіт?</h3>
+                    <svg class="faq__arrow" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.82.18 12 9.34 21.18.18 24 3 12 15 0 3z" fill="#9B54FF"/></svg>
+                </div>
+                <div class="faq__content">
+                    <p class="faq__answer">Підстава і терміни, опис об’єкта, спосіб проведення (відкрито/приховано), склад команди, перелік виконаних робіт, застосовані прилади із серійними номерами, результати та рекомендації</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__header">
+                    <h3 class="faq__question">Що робите, якщо знаходите пристрій?</h3>
+                    <svg class="faq__arrow" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.82.18 12 9.34 21.18.18 24 3 12 15 0 3z" fill="#9B54FF"/></svg>
+                </div>
+                <div class="faq__content">
+                    <p class="faq__answer">Діємо виключно в правовому полі: повідомлення компетентних органів, вилучення/передача або знищення за актом і подальша звітність</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <div class="faq__header">
+                    <h3 class="faq__question">Як можна перевірити ефективність змін після аудитів?</h3>
+                    <svg class="faq__arrow" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.82.18 12 9.34 21.18.18 24 3 12 15 0 3z" fill="#9B54FF"/></svg>
+                </div>
+                <div class="faq__content">
+                    <p class="faq__answer">Порівнюємо “було/стало” за офіційними артефактами перевірки, контролюємо мітки доступу, робимо точкові повторні огляди у критичні моменти</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section class="consultation" id="consultation">
+        <div class="container">
+            <img src="../img/logo.webp" alt="logo" class="consultation__logo" width="275" height="140">
+            <h2 class="consultation__title">Отримайте безкоштовну <br> консультацію вже сьогодні</h2>
+
+            <form class="consultation__form">
+                <h3 class="consultation__form-title">Залиште заявку і ми зв'яжемося з вами</h3>
+                
+                <div class="consultation__form-inputs">
+                    <input type="text" placeholder="Ім'я" class="consultation__input" id="firstName" required>
+                    <input type="tel" placeholder="Телефон" class="consultation__input" id="phone" required>
+                    <input type="email" placeholder="E-mail" class="consultation__input" id="email" required>
+                </div>
+                
+                <button type="submit" class="consultation__btn">Отримати консультацію</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer container" id="contacts">
+        <div class="footer__inner footer__desktop">
+            <div class="footer__column footer-column">
+                <a href="../index.html" class="footer-column__logo-link">
+                    <img src="../img/logo.webp" alt="" class="footer-column__logo" width="155" height="80">
+                </a>
+
+                <div class="footer-column__block">
+                    <a href="mailto:safenese@gmail.com" class="footer-column__link" target="_blank">safenese@gmail.com</a>
+                </div>
+
+                <div class="footer-column__block">
+                    <p class="footer-column__text">Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1а </p>
+                </div>
+
+                <div class="footer-column__block">
+                    <a href="tel:+380770888000" class="footer-column__text">+380 (77) 088 80 00</a>
+                </div>
+
+                <div class="footer-column__socials">
+                    <a href="https://www.instagram.com/safe.net.security?igsh=eTlybjZtbHBnaTFh" class="footer-column__social-link" target="_blank">
+                        <img src="../img/inst.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/share/1AUpwiZ2hr/?mibextid=wwXIfr" class="footer-column__social-link" target="_blank">
+                        <img src="../img/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://t.me/SafeNet_Security" class="footer-column__social-link" target="_blank">
+                        <img src="../img/tg.svg" alt="Telegram">
+                    </a>
+                    <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z" class="footer-column__social-link" target="_blank">
+                        <img src="../img/youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__column footer-column">
+                <p class="footer-column__title">Всi послуги:</p>
+
+                <div class="footer-column__block footer-column__services">
+                    <a href="./audit-cyber.html">Аудит кібербезпеки</a>
+                    <a href="./lan-protect.html">Захист мереж та даних</a>
+                    <a href="./web-security.html">Безпека веб-ресурсів</a>
+                    <a href="./incident-react.html">Реагування на інциденти та кризові ситуації</a>
+                    <a href="./polygraf.html">Перевірка на поліграфі</a>
+                    <a href="./car-protect.html">Захист транспорту від стеження</a>
+                </div>
+            </div>
+
+            <div class="footer__column footer-column">
+                <p class="footer-column__title">Навiгацiя</p>
+
+                <div class="footer-column__block footer-column__nav">
+                    <a href="../index.html" class="footer-column__link">Головна</a>
+                    <a href="../index.html#about" class="footer-column__link">Про нас</a>
+                    <a href="../index.html#faq" class="footer-column__link">Частi запитання</a>
+                </div>
+            </div>
+
+            <div class="footer__column footer-column">
+                <p class="footer-column__title">
+                    Підприємство діє у рамках чинного законодавства України:
+                </p>
+
+                <div class="footer-column__block footer-column__docs">
+                    <a href="https://zakon.rada.gov.ua/laws/show/254%D0%BA/96-%D0%B2%D1%80#Text" class="footer-column__link" target="_blank">Конституції України</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/222-19#Text" class="footer-column__link" target="_blank">Про ліцензування видів господарської діяльності</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" class="footer-column__link" target="_blank">Про захист персональних даних</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/1280-15#Text" class="footer-column__link" target="_blank">Про телекомунікації</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/1770-14#Text" class="footer-column__link" target="_blank">Про радіочастотний ресурс України</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/2657-12#Text" class="footer-column__link" target="_blank">Про інформацію</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/1229/99#Text" class="footer-column__link" target="_blank">Про Положення про технічний захист інформації в Україні</a>
+                </div>
+            </div>
         </div>
 
+        <div class="footer__mobile">
+            <div class="footer__mobile-row">
+                <div class="footer__mobile-col">
+                    <a href="../index.html" class="footer-column__logo-link">
+                        <img src="../img/logo.webp" alt="" class="footer-column__logo" width="155" height="80">
+                    </a>
 
-      </div>
-       <a href="#contacts" class="hero__cta animate animate-left">Отримати консультацію</a>
-    </div>
-  </div>
-</header>
+                    <div class="footer-column__block">
+                        <p class="footer-column__text-gray">Звʼяжіться з нами:</p>
+                        <a href="mailto:safenese@gmail.com" class="footer-column__link" target="_blank">safenese@gmail.com</a>
+                    </div>
 
-<a name="about"></a>
-<section class="benefits container animate animate-up">
-  <h2 class="benefits__title">Що ви отримуєте з нами</h2>
+                    <div class="footer-column__block">
+                        <p class="footer-column__text-gray">Адреса:</p>
+                        <p class="footer-column__text">
+                            Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1а 
+                        </p>
+                    </div>
 
-  <div class="benefits__row-first">
-    <div class="benefits__item ">
-      <img class="benefits__image" src="../images/benefits-first.png" alt="">
-    </div>
-    <div class="benefits__item">
-      <img class="benefits__image" src="../images/benefits-second.png" alt="">
-    </div>
-    <div class="benefits__item">
-      <img class="benefits__image" src="../images/benefits-third.png" alt="">
-    </div>
-  </div>
+                    <div class="footer-column__block">
+                        <p class="footer-column__text-gray">Телефон:</p>
+                        <a href="tel:+380770888000" class="footer-column__text">+380 (77) 088 80 00</a>
+                    </div>
 
-  <div class="benefits__row-second">
-    <div class="benefits__item">
-      <img class="benefits__image" src="../images/benefits-fourth.png" alt="">
-    </div>
-    <div class="benefits__item">
-      <img class="benefits__image" src="../images/benefits-fifth.png" alt="">
-    </div>
-  </div>
+                    <div class="footer-column__block">
+                        <p class="footer-column__text-gray">Навiгацiя</p>
+                        <div class="footer-column__block footer-column__nav">
+                            <a href="../index.html" class="footer-column__link">Головна</a>
+                            <a href="../index.html#about" class="footer-column__link">Про нас</a>
+                            <a href="../index.html#faq" class="footer-column__link">Частi запитання</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <div class="swiper benefits__swiper">
-    <div class="swiper-wrapper animate animate-up">
-      <div class="swiper-slide benefits__item">
-        <img class="benefits__image" src="../images/benefits-first.png" alt="">
-      </div>
-      <div class="swiper-slide benefits__item">
-        <img class="benefits__image" src="../images/benefits-second.png" alt="">
-      </div>
-      <div class="swiper-slide benefits__item">
-        <img class="benefits__image" src="../images/benefits-third.png" alt="">
-      </div>
-      <div class="swiper-slide benefits__item">
-        <img class="benefits__image" src="../images/benefits-fourth.png" alt="">
-      </div>
-      <div class="swiper-slide benefits__item">
-        <img class="benefits__image" src="../images/benefits-fifth.png" alt="">
-      </div>
-    </div>
+            <div class="footer__mobile-socials">
+                <div class="footer-column__socials">
+                    <a href="https://www.instagram.com/safe.net.security?igsh=eTlybjZtbHBnaTFh" class="footer-column__social-link" target="_blank">
+                        <img src="../img/inst.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/share/1AUpwiZ2hr/?mibextid=wwXIfr" class="footer-column__social-link" target="_blank">
+                        <img src="../img/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://t.me/SafeNet_Security" class="footer-column__social-link" target="_blank">
+                        <img src="../img/tg.svg" alt="Telegram">
+                    </a>
+                    <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z" class="footer-column__social-link" target="_blank">
+                        <img src="../img/youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
 
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+            <div class="footer__mobile-services">
+                <p class="footer-column__title">Всi послуги:</p>
+                <div class="footer-column__block footer-column__services">
+                    <a href="./audit-cyber.html">Аудит кібербезпеки</a>
+                    <a href="./lan-protect.html">Захист мереж та даних</a>
+                    <a href="./web-security.html">Безпека веб-ресурсів</a>
+                    <a href="./office-check.html">Аудит офісів і житла</a>
+                    <a href="./incident-react.html">Реагування на інциденти та кризові ситуації</a>
+                    <a href="./polygraf.html">Перевірка на поліграфі</a>
+                    <a href="./car-protect.html">Захист транспорту від стеження</a>
+                </div>
+            </div>
 
-<a name="work"></a>
-<section class="work-plan container animate animate-up">
-    <h2 class="work-plan__title">Етапи роботи:</h2>
-
-    <div class="work-plan-container">
-        <div class="work-plan-div">
-            <p class="work-plan-num">1</p>
-            <p class="work-plan-p">Виїзд спеціалістів на об’єкт — оглядаємо територію та вхідні точки.</p>
+            <div class="footer__mobile-docs">
+                <p class="footer-column__title">
+                    Підприємство діє у рамках чинного законодавства України:
+                </p>
+                <div class="footer-column__block footer-column__docs">
+                    <a href="https://zakon.rada.gov.ua/laws/show/254%D0%BA/96-%D0%B2%D1%80#Text" class="footer-column__link" target="_blank">Конституції України</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/222-19#Text" class="footer-column__link" target="_blank">Про ліцензування видів господарської діяльності</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" class="footer-column__link" target="_blank">Про захист персональних даних</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/1280-15#Text" class="footer-column__link" target="_blank">Про телекомунікації</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/1770-14#Text" class="footer-column__link" target="_blank">Про радіочастотний ресурс України</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/2657-12#Text" class="footer-column__link" target="_blank">Про інформацію</a>
+                    <a href="https://zakon.rada.gov.ua/laws/show/1229/99#Text" class="footer-column__link" target="_blank">Про Положення про технічний захист інформації в Україні</a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-                <div class="work-plan-div">
-            <p class="work-plan-num">2</p>
-            <p class="work-plan-p">Огляд охорони й доступу — перевіряємо охорону, відео, сигналізацію.</p>
-        </div>
-
-                <div class="work-plan-div">
-            <p class="work-plan-num">3</p>
-            <p class="work-plan-p">Сканування на закладки — шукаємо жучки, трекери, спостереження.</p>
-        </div>
-
-                <div class="work-plan-div">
-            <p class="work-plan-num">4</p>
-            <p class="work-plan-p">Аналіз ризиків і вразливостей — фіксуємо точки можливого доступу.</p>
-        </div>
-
-                <div class="work-plan-div">
-            <p class="work-plan-num">5</p>
-            <p class="work-plan-p">Рекомендації та звіт — складаємо план посилення безпеки.</p>
-        </div>
-    </div>
-</section>
-
-
-
-<a name="contacts"></a>
-<section class="contact container animate animate-up">
-  <h2 class="contact__title">Звʼяжімося та <br> зробімо краще</h2>
-  <form class="contact__form" action="https://formspree.io/f/mjkraddq" method="POST" id="form-primary">
-  <input type="text" name="name" class="contact__input" placeholder="Ім’я" required>
-  <input type="tel" name="phone" class="contact__input" placeholder="Телефон" required>
-  <input type="email" name="email" class="contact__input" placeholder="Email" required>
-  <textarea name="message" class="contact__textarea" placeholder="Коментар" required></textarea>
-  <button type="submit" class="contact__button">Отримати консультацію</button>
-</form>
-
-</section>
-
-<footer class="footer container">
-  <div class="footer__inner footer__desktop">
-    <div class="footer__column footer-column">
-      <a href="#" class="footer-column__logo-link">
-        <img src="../images/logo.webp" alt="" class="footer-column__logo">
-      </a>
-
-      <div class="footer-column__block">
-        <p class="footer-column__text-gray">Звʼяжіться з нами:</p>
-        <a href="mailto:safenese@gmail.com" class="footer-column__link">safenese@gmail.com</a>
-      </div>
-
-      <div class="footer-column__block">
-        <p class="footer-column__text-gray">Адреса:</p>
-        <p class="footer-column__text">
-          Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1а
-        </p>
-      </div>
-
-      <div class="footer-column__block">
-        <p class="footer-column__text-gray">Телефон:</p>
-        <a href="tel:+380 (77) 088 80 00" class="footer-column__text">+380 (77) 088 80 00</p>
-      </div>
-
-      <div class="footer-column__socials">
-        <a href="https://www.instagram.com/safe.net.security?igsh=eTlybjZtbHBnaTFh" class="footer-column__social-link">
-          <img src="../images/inst.svg" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/share/1AUpwiZ2hr/?mibextid=wwXIfr" class="footer-column__social-link">
-          <img src="../images/gacebook.svg" alt="Facebook">
-        </a>
-        <a href="https://t.me/SafeNet_Security" class="footer-column__social-link">
-          <img src="../images/tg.svg" alt="Telegram">
-        </a>
-        <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z" class="footer-column__social-link">
-          <img src="../images/youtube.svg" alt="YouTube">
-        </a>
-      </div>
-    </div>
-
-    <div class="footer__column footer-column">
-      <p class="footer-column__title">Послуги:</p>
-
-      <div class="footer-column__block footer-column__services">
-        <a href="../pages/audit-cyber.html">Аудит кібербезпеки</a>
-        <a href="../pages/lan-protect.html">Захист мереж та даних</a>
-        <a href="../pages/web-security.html">Безпека веб-ресурсів</a>
-        <a href="../pages/audit-office.html">Аудит офісів і житла</a>
-        <a href="#">Навчання персоналу та консультації</a>
-        <a href="../pages/incident-react.html">Реагування на інциденти та кризові ситуації</a>
-        <a href="../pages/car-protect.html">Захист транспорту від стеження</a>
-        <a href="../pages/polygraf.html">Перевірка на поліграфі</a>
-      </div>
-    </div>
-
-    <div class="footer__column footer-column">
-      <p class="footer-column__title">Навiгацiя</p>
-
-      <div class="footer-column__block footer-column__nav">
-        <a href="#about" class="footer-column__link">Що ви отримуєте</a>
-        <a href="#work" class="footer-column__link">Етапи роботи</a>
-        <a href="#contacts" class="footer-column__link">Контакти</a>
-      </div>
-    </div>
-
-    <div class="footer__column footer-column">
-      <p class="footer-column__title">
-        Підприємство діє у рамках чинного законодавства України:
-      </p>
-
-      <div class="footer-column__block footer-column__docs">
-        <a href="https://zakon.rada.gov.ua/laws/show/254%D0%BA/96-%D0%B2%D1%80#Text" class="footer-column__link">Конституції України</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/222-19#Text" class="footer-column__link">Про ліцензування видів господарської діяльності</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" class="footer-column__link">Про захист персональних даних</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/1280-15#Text" class="footer-column__link">Про телекомунікації</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/1770-14#Text" class="footer-column__link">Про радіочастотний ресурс України</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/2657-12#Text" class="footer-column__link">Про інформацію</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/1229/99#Text" class="footer-column__link">Про Положення про технічний захист інформації в Україні</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer__mobile">
-    <div class="footer__mobile-row">
-      <div class="footer__mobile-col">
-        <a href="#" class="footer-column__logo-link">
-          <img src="../images/logo.webp" alt="" class="footer-column__logo">
-        </a>
-
-        <div class="footer-column__block">
-          <p class="footer-column__text-gray">Звʼяжіться з нами:</p>
-          <a href="mailto:safenese@gmail.com" class="footer-column__link">safenese@gmail.com</a>
-        </div>
-
-        <div class="footer-column__block">
-          <p class="footer-column__text-gray">Адреса:</p>
-          <p class="footer-column__text">
-            Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1а
-          </p>
-        </div>
-
-        <div class="footer-column__block">
-          <p class="footer-column__text-gray">Телефон:</p>
-          <p class="footer-column__text">+380 (77) 088 80 00</p>
-        </div>
-      </div>
-
-      <div class="footer__mobile-col">
-        <p class="footer-column__title">Навiгацiя</p>
-        <div class="footer-column__block footer-column__nav">
-            <a href="#about" class="footer-column__link">Що ви отримуєте</a>
-            <a href="#work" class="footer-column__link">Етапи роботи</a>
-            <a href="#contacts" class="footer-column__link">Контакти</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__mobile-socials">
-      <div class="footer-column__socials">
-        <a href="https://www.instagram.com/safe.net.security?igsh=eTlybjZtbHBnaTFh" class="footer-column__social-link">
-          <img src="../images/inst.svg" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/share/1AUpwiZ2hr/?mibextid=wwXIfr" class="footer-column__social-link">
-          <img src="../images/gacebook.svg" alt="Facebook">
-        </a>
-        <a href="https://t.me/SafeNet_Security" class="footer-column__social-link">
-          <img src="../images/tg.svg" alt="Telegram">
-        </a>
-        <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z" class="footer-column__social-link">
-          <img src="../images/youtube.svg" alt="YouTube">
-        </a>
-      </div>
-    </div>
-
-    <div class="footer__mobile-services">
-      <p class="footer-column__title">Послуги:</p>
-      <div class="footer-column__block footer-column__services">
-        <a href="../pages/audit-cyber.html">Аудит кібербезпеки</a>
-        <a href="../pages/lan-protect.html">Захист мереж та даних</a>
-        <a href="../pages/web-security.html">Безпека веб-ресурсів</a>
-        <a href="../pages/audit-office.html">Аудит офісів і житла</a>
-        <a href="#">Навчання персоналу та консультації</a>
-        <a href="../pages/incident-react.html">Реагування на інциденти та кризові ситуації</a>
-        <a href="../pages/car-protect.html">Захист транспорту від стеження</a>
-        <a href="../pages/polygraf.html">Перевірка на поліграфі</a>
-      </div>
-    </div>
-
-    <div class="footer__mobile-docs">
-      <p class="footer-column__title">
-        Підприємство діє у рамках чинного законодавства України:
-      </p>
-      <div class="footer-column__block footer-column__docs">
-        <a href="https://zakon.rada.gov.ua/laws/show/254%D0%BA/96-%D0%B2%D1%80#Text" class="footer-column__link">Конституції України</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/222-19#Text" class="footer-column__link">Про ліцензування видів господарської діяльності</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" class="footer-column__link">Про захист персональних даних</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/1280-15#Text" class="footer-column__link">Про телекомунікації</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/1770-14#Text" class="footer-column__link">Про радіочастотний ресурс України</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/2657-12#Text" class="footer-column__link">Про інформацію</a>
-        <a href="https://zakon.rada.gov.ua/laws/show/1229/99#Text" class="footer-column__link">Про Положення про технічний захист інформації в Україні</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-<button class="floating-button" id="openModal">
-  <img src="../images/contact-button.png" alt="Chat" height="70" width="70">
-</button>
-
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <button class="modal-close" id="closeModal">&times;</button>
-    <h2 class="modal-title">Зв’яжіться з нами</h2>
-    
-    <form class="modal-form" action="https://formspree.io/f/mjkraddq" method="POST" id="modal-form-secondary">
-    <input type="text" name="name" placeholder="Ім’я" required>
-    <input type="tel" name="phone" placeholder="Телефон" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea placeholder="Коментар" name="message" required></textarea>
-    <button type="submit" class="modal-submit">Отримати консультацiю</button>
-  </form>
-
-
-    <div class="modal-icons">
-        <a href="https://www.instagram.com/safe.net.security?igsh=eTlybjZtbHBnaTFh"><img src="../images/inst.svg" alt="icon"></a>
-        <a href="https://www.facebook.com/share/1AUpwiZ2hr/?mibextid=wwXIfr"><img src="../images/gacebook.svg" alt="icon"></a>
-        <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z"> <img src="../images/youtube.svg" alt="icon"></a>
-        <a href="https://t.me/SafeNet_Security"><img src="../images/tg.svg" alt="icon"></a>
-    </div>
-  </div>
-</div>
-
-
-
-<script>
-    const openModalBtn = document.getElementById('openModal');
-    const closeModalBtn = document.getElementById('closeModal');
-    const modalOverlay = document.getElementById('modalOverlay');
-
-    openModalBtn.addEventListener('click', () => {
-      modalOverlay.classList.add('show');
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-      modalOverlay.classList.remove('show');
-    });
-
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        modalOverlay.classList.remove('show');
-      }
-    });
-</script>
-
-    <script src="../scripts/burger-menu.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="../scripts/slider.js"></script>
-    <script src="../scripts/animations.js"></script>
-
-
+    <script src="../js/burger-menu.js"></script>
+    <script src="../js/dropdown-menu.js"></script>
+    <script src="../js/counter-animation.js"></script>
+    <script src="../js/protection-stack.js"></script>
+    <script src="../js/devices-slider.js"></script>
+    <script src="../js/phone-validation.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/section-animations.js"></script>
+    <script src="../js/office-check-cards.js"></script>
 </body>
 </html>

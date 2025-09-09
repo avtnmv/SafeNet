@@ -1,10 +1,8 @@
-/* Import main styles */
 @import url('style.css');
 
 :root {
     --color-price: #9D9D9D;
 }
-
 
 .header-content {
     position: absolute;
@@ -24,16 +22,16 @@
     margin-bottom: clamp(24px, calc(32px - 0.574vw), 32px);
     line-height: 0.9;
     font-size: clamp(35px, calc(35px + (91 * ((100vw - 320px) / 1400))), 126px);
+    text-transform: uppercase;
 }
 
-/* Header description styling for polygraph */
+
 .header-description {
     text-transform: uppercase;
     font-size: clamp(17px, calc(17px + (11 * ((100vw - 320px) / 1400))), 28px);
 }
 
 
-/* Polygraph Section */
 .polygraph-section {
     background-color: #060E1E;
 }
@@ -160,7 +158,6 @@
     line-height: 1.5;
 }
 
-/* Advantages Section */
 .advantages-section {
     background-color: #060E1E;
 }
@@ -233,12 +230,10 @@
     display: block;
 }
 
-/* Universal section margin */
 .section-margin {
     margin-top: clamp(64px, 6vw, 96px);
 }
 
-/* Simple fade-in animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -270,7 +265,6 @@
     }
 }
 
-/* Animation classes */
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -283,7 +277,6 @@
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Staggered animations */
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
@@ -302,14 +295,12 @@
 .process-item:nth-child(5) { animation-delay: 0.5s; }
 .process-item:nth-child(6) { animation-delay: 0.6s; }
 
-/* Initially hidden */
 .card,
 .advantage-card,
 .process-item {
     opacity: 0;
 }
 
-/* Process Section */
 .process-section {
     background-color: #060E1E;
 }
@@ -364,7 +355,6 @@
     text-align: left;
 }
 
-/* Mobile centering for process items */
 @media (max-width: 768px) {
     .process-items {
         justify-content: center;
