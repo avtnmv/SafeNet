@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (consultationForm) {
         consultationForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Всегда предотвращаем стандартную отправку формы
             
             const firstName = document.getElementById('firstName').value.trim();
             const phone = document.getElementById('phone').value.trim();
@@ -115,12 +115,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.');
+            // Если валидация прошла успешно, отправляем данные на Formspree через Fetch API
+            const formData = {
+                firstName: firstName,
+                phone: phone,
+                email: email
+            };
             
-            consultationForm.reset();
-            if (phoneInput) {
-                phoneInput.placeholder = 'Телефон';
-            }
+            // Показываем индикатор загрузки
+            const submitButton = consultationForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Відправляємо...';
+            submitButton.disabled = true;
+            
+            fetch('https://formspree.io/f/mjkraddq', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.');
+                    consultationForm.reset();
+                    if (phoneInput) {
+                        phoneInput.placeholder = 'Телефон';
+                    }
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Виникла помилка при відправці. Спробуйте ще раз.');
+            })
+            .finally(() => {
+                // Восстанавливаем кнопку
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
         });
     }
 });
