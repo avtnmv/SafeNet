@@ -87,21 +87,34 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = document.getElementById('phone').value.trim();
             const email = document.getElementById('email').value.trim();
             
+            // Имя обязательно
             if (!firstName || firstName.length < 2) {
                 alert('Будь ласка, введіть коректне ім\'я');
                 return;
             }
             
-            if (!phone || phone.length < 4 || !phone.startsWith('+')) {
+            // Проверяем, что заполнен хотя бы один контакт (телефон ИЛИ email)
+            const hasPhone = phone && phone.length >= 4 && phone.startsWith('+');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const hasEmail = email && emailRegex.test(email);
+            
+            if (!hasPhone && !hasEmail) {
+                alert('Будь ласка, введіть коректний номер телефону або електронну пошту');
+                return;
+            }
+            
+            // Если телефон заполнен, но некорректный
+            if (phone && !hasPhone) {
                 alert('Будь ласка, введіть коректний номер телефону');
                 return;
             }
             
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email || !emailRegex.test(email)) {
+            // Если email заполнен, но некорректный
+            if (email && !hasEmail) {
                 alert('Будь ласка, введіть коректну електронну пошту');
                 return;
             }
+            
             alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.');
             
             consultationForm.reset();
