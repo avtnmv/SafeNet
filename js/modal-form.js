@@ -59,6 +59,8 @@ class ModalForm {
             justify-content: center;
             opacity: 0;
             transition: opacity 0.3s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         `;
 
         // Создаем модальное окно
@@ -230,56 +232,157 @@ class ModalForm {
 
             /* Адаптивность для мобильных устройств */
             @media (max-width: 768px) {
+                .modal-overlay {
+                    padding: 10px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .modal-form {
+                    width: 100%;
+                    max-width: calc(100vw - 20px);
+                    height: auto;
+                    max-height: calc(100vh - 40px);
+                    overflow-y: auto;
+                    transform: scale(1) !important;
+                    margin: 0;
+                }
+
                 .modal-form .consultation__form {
                     width: 100%;
-                    max-width: 500px;
                     height: auto;
-                    padding: 32px 24px;
-                    margin: 20px;
+                    min-height: auto;
+                    padding: 24px 20px;
+                    margin: 0;
+                    max-height: none;
+                    overflow: visible;
                 }
 
                 .modal-form .consultation__form-title {
                     font-size: 20px;
-                    margin-bottom: 24px;
+                    margin-bottom: 20px;
+                    line-height: 1.2;
                 }
 
                 .modal-form .consultation__form-inputs {
-                    gap: 8px;
-                    margin-bottom: 24px;
+                    gap: 12px;
+                    margin-bottom: 20px;
                 }
 
                 .modal-form .consultation__input {
-                    height: 50px;
-                    font-size: 14px;
+                    height: 48px;
+                    font-size: 16px;
+                    padding: 0 16px;
                 }
 
                 .modal-form .consultation__btn {
-                    height: 50px;
-                    font-size: 14px;
+                    height: 48px;
+                    font-size: 16px;
+                    margin-top: 8px;
                 }
 
                 .modal-form__close {
-                    top: 15px;
-                    right: 15px;
-                    width: 35px;
-                    height: 35px;
+                    top: 12px;
+                    right: 12px;
+                    width: 32px;
+                    height: 32px;
+                    padding: 6px;
+                }
+
+                .modal-form__close svg {
+                    width: 20px;
+                    height: 20px;
                 }
             }
 
             @media (max-width: 480px) {
+                .modal-overlay {
+                    padding: 5px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .modal-form {
+                    max-width: calc(100vw - 10px);
+                    max-height: calc(100vh - 20px);
+                }
+
                 .modal-form .consultation__form {
-                    padding: 24px 20px;
-                    margin: 15px;
+                    padding: 20px 16px;
                 }
 
                 .modal-form .consultation__form-title {
                     font-size: 18px;
-                    margin-bottom: 20px;
+                    margin-bottom: 16px;
                 }
 
                 .modal-form .consultation__form-inputs {
-                    gap: 6px;
-                    margin-bottom: 20px;
+                    gap: 10px;
+                    margin-bottom: 16px;
+                }
+
+                .modal-form .consultation__input {
+                    height: 44px;
+                    font-size: 16px;
+                    padding: 0 14px;
+                }
+
+                .modal-form .consultation__btn {
+                    height: 44px;
+                    font-size: 15px;
+                }
+
+                .modal-form__close {
+                    top: 10px;
+                    right: 10px;
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px;
+                }
+
+                .modal-form__close svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .modal-overlay {
+                    padding: 0;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .modal-form {
+                    max-width: calc(100vw - 10px);
+                    max-height: calc(100vh - 20px);
+                    border-radius: 12px;
+                }
+
+                .modal-form .consultation__form {
+                    padding: 16px 14px;
+                    border-radius: 12px 12px 0 0;
+                }
+
+                .modal-form .consultation__form-title {
+                    font-size: 16px;
+                    margin-bottom: 14px;
+                }
+
+                .modal-form .consultation__form-inputs {
+                    gap: 8px;
+                    margin-bottom: 14px;
+                }
+
+                .modal-form .consultation__input {
+                    height: 42px;
+                    font-size: 15px;
+                    padding: 0 12px;
+                }
+
+                .modal-form .consultation__btn {
+                    height: 42px;
+                    font-size: 14px;
                 }
             }
         `;
@@ -433,6 +536,9 @@ class ModalForm {
         this.hasShown = true;
         this.createModal();
 
+        // Настройки для мобильных устройств
+        this.setupMobileOptimizations();
+
         // Анимация появления
         requestAnimationFrame(() => {
             this.overlay.style.opacity = '1';
@@ -459,12 +565,52 @@ class ModalForm {
         }
     }
 
+    setupMobileOptimizations() {
+        // Проверяем, является ли устройство мобильным
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // Блокируем скролл body на мобильных устройствах
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+            document.body.style.top = `-${window.scrollY}px`;
+            
+            // Убираем transform scale для мобильных устройств
+            this.modal.style.transform = 'none';
+            
+            // Добавляем обработчик для восстановления скролла при закрытии
+            this.restoreScroll = () => {
+                const scrollY = document.body.style.top;
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.top = '';
+                if (scrollY) {
+                    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+                }
+            };
+        }
+    }
+
     hideModal() {
         if (!this.modal) return;
 
+        // Восстанавливаем скролл на мобильных устройствах
+        if (this.restoreScroll) {
+            this.restoreScroll();
+        }
+
         // Анимация скрытия
         this.overlay.style.opacity = '0';
-        this.modal.style.transform = 'scale(0.8)';
+        
+        // Для мобильных устройств убираем transform
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            this.modal.style.transform = 'none';
+        } else {
+            this.modal.style.transform = 'scale(0.8)';
+        }
 
         setTimeout(() => {
             if (this.overlay && this.overlay.parentNode) {
@@ -473,6 +619,7 @@ class ModalForm {
             this.modal = null;
             this.overlay = null;
             this.form = null;
+            this.restoreScroll = null;
         }, 300);
     }
 
