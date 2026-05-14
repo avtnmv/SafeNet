@@ -716,18 +716,20 @@
 .old-price {
     font-family: var(--font-heading);
     font-weight: var(--font-weight-heading-medium);
-    color: var(--color-white-opacity-30);
-    font-size: clamp(18px, calc(18px + (4 * ((100vw - 320px) / 1400))), 22px);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: clamp(24px, calc(24px + (6 * ((100vw - 320px) / 1400))), 30px);
     text-decoration: line-through;
-    text-decoration-color: var(--color-white-opacity-30);
-    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(255, 255, 255, 0.55);
+    text-decoration-thickness: 2px;
 }
 
 .new-price {
     font-family: var(--font-heading);
     font-weight: var(--font-weight-heading-medium);
     color: var(--color-white);
-    font-size: clamp(45px, 5vw, 57px);
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .pricing-note {
