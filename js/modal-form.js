@@ -63,7 +63,6 @@ class ModalForm {
             -webkit-overflow-scrolling: touch;
         `;
 
-        // Создаем модальное окно
         this.modal = document.createElement('div');
         this.modal.className = 'modal-form';
         this.modal.style.cssText = `
@@ -94,15 +93,12 @@ class ModalForm {
             <button type="submit" class="consultation__btn">Отримати консультацію</button>
         `;
 
-        // Добавляем стили
         this.addStyles();
 
-        // Собираем модальное окно
         this.modal.appendChild(this.form);
         this.overlay.appendChild(this.modal);
         document.body.appendChild(this.overlay);
 
-        // Обработчики событий
         this.addEventListeners();
     }
 
