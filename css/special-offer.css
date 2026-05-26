@@ -320,6 +320,160 @@ body {
     color: rgba(240, 240, 240, 0.8);
 }
 
+.special-offer-consultation {
+    padding-bottom: clamp(72px, 8vw, 128px);
+}
+
+.special-offer-consultation__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+    padding: clamp(32px, 4vw, 56px);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 18% 22%, rgba(144, 66, 255, 0.24), transparent 34%),
+        linear-gradient(135deg, #1B112D 0%, #24163B 54%, #17101F 100%);
+    box-shadow: inset 2px 2px 9px rgba(255, 255, 255, 0.1), inset 1px 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+.special-offer-consultation__eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-family: 'Tektur', var(--font-heading);
+    font-size: 18px;
+    line-height: 1;
+    color: #9042FF;
+    text-transform: uppercase;
+}
+
+.special-offer-consultation__title {
+    margin: 0 0 20px;
+    max-width: 640px;
+    font-family: 'Tektur', var(--font-heading);
+    font-size: clamp(40px, calc(24px + 3vw), 76px);
+    line-height: 1.02;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.special-offer-consultation__text {
+    margin: 0;
+    max-width: 560px;
+    font-family: 'Manrope', var(--font-paragraph);
+    font-size: 20px;
+    line-height: 1.45;
+    color: rgba(240, 240, 240, 0.8);
+}
+
+.special-offer-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: clamp(24px, 3vw, 40px);
+    border-radius: 24px;
+    background: rgba(240, 240, 240, 0.07);
+    background-blend-mode: plus-lighter;
+    box-shadow: inset 2px 2px 9px rgba(255, 255, 255, 0.12), inset 1px 1px 4px rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(7.5px);
+}
+
+.special-offer-form__title {
+    margin: 0 0 28px;
+    font-family: 'Tektur', var(--font-heading);
+    font-size: clamp(24px, calc(18px + 0.6vw), 32px);
+    line-height: 1.15;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.special-offer-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.special-offer-form__input,
+.special-offer-form__textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0 20px;
+    font-family: 'Manrope', var(--font-paragraph);
+    font-size: 16px;
+    color: var(--color-white);
+    transition: border-color 0.25s ease-in-out, background 0.25s ease-in-out;
+}
+
+.special-offer-form__input {
+    height: 60px;
+}
+
+.special-offer-form__textarea {
+    min-height: 120px;
+    padding-top: 18px;
+    resize: vertical;
+}
+
+.special-offer-form__input::placeholder,
+.special-offer-form__textarea::placeholder {
+    color: rgba(240, 240, 240, 0.58);
+}
+
+.special-offer-form__input:focus,
+.special-offer-form__textarea:focus {
+    outline: none;
+    border-color: #9042FF;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.special-offer-form__button {
+    width: 100%;
+    min-height: 64px;
+    border: none;
+    border-radius: 100px;
+    background: #9042FF;
+    box-shadow: inset 0 0 12px #FFFFFF, inset 0 -24px 32px rgba(255, 255, 255, 0.22), inset 0 8px 24px -16px rgba(255, 255, 255, 0.24);
+    font-family: 'Tektur', var(--font-heading);
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
+}
+
+.special-offer-form__button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.special-offer-form__button:disabled {
+    cursor: progress;
+    opacity: 0.72;
+    transform: none;
+}
+
+.special-offer-form__status {
+    min-height: 22px;
+    margin: 14px 0 0;
+    font-family: 'Manrope', var(--font-paragraph);
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(240, 240, 240, 0.82);
+}
+
+.special-offer-form__status.is-success {
+    color: #A8FFCB;
+}
+
+.special-offer-form__status.is-error {
+    color: #FFB4B4;
+}
+
 .special-offer-faq {
     padding-bottom: clamp(72px, 8vw, 136px);
 }
@@ -543,6 +697,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .special-offer-consultation__content {
+        grid-template-columns: 1fr;
+    }
+
     .special-offer-footer__meta {
         flex-direction: column;
     }
@@ -697,6 +855,51 @@ body {
     .inspection-benefit-description {
         font-size: 16px;
         line-height: 1.45;
+    }
+
+    .special-offer-consultation {
+        padding-bottom: 96px;
+    }
+
+    .special-offer-consultation__content {
+        padding: 26px 20px;
+        border-radius: 24px;
+        text-align: center;
+    }
+
+    .special-offer-consultation__eyebrow {
+        margin-bottom: 14px;
+        font-size: 16px;
+    }
+
+    .special-offer-consultation__title {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(28px, 8.2vw, 52px);
+        line-height: 1.06;
+    }
+
+    .special-offer-consultation__text {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+    }
+
+    .special-offer-form {
+        padding: 22px 18px;
+        text-align: left;
+    }
+
+    .special-offer-form__title {
+        margin-bottom: 22px;
+        font-size: 22px;
+    }
+
+    .special-offer-form__button {
+        min-height: 58px;
+        font-size: 18px;
     }
 
     .special-offer-faq {

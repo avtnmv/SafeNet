@@ -125,7 +125,7 @@
             </nav>
 
             <div class="cta-btn-container">
-                <a href="../index.html#consultation" class="cta-btn">Замовити перевірку</a>
+                <a href="#consultation" class="cta-btn">Замовити перевірку</a>
             </div>
 
             <div class="burger-menu" id="burger-menu">
@@ -172,7 +172,7 @@
                 <h1 class="special-offer-title">Спеціальна пропозиція для власників автомобілів</h1>
                 <p class="special-offer-description">Виявляємо приховані пристрої стеження, прослуховування та інші засоби несанкціонованого контролю у вашому автомобілі</p>
                 <div class="special-offer-actions">
-                    <a href="../index.html#consultation" class="header-cta-btn special-offer-cta">
+                    <a href="#consultation" class="header-cta-btn special-offer-cta">
                         Замовити перевірку
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#special-offer-arrow)"><path d="M8 8v2.667h11.453L6.667 23.453l1.88 1.88 12.786-12.786V24H24V8z" fill="#fff"/></g><defs><clipPath id="special-offer-arrow"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs></svg>
                     </a>
@@ -182,7 +182,7 @@
     </header>
 
     <main class="special-offer-main">
-        <section class="offer-details-section container">
+        <section class="offer-details-section container" id="offer-details">
             <h2 class="offer-details-title">Що ви отримаєте після перевірки?</h2>
 
             <div class="offer-details-card">
@@ -192,7 +192,7 @@
                         <span class="offer-price-old">500$</span>
                         <span class="offer-price-current">450$</span>
                     </div>
-                    <a href="../index.html#consultation" class="header-cta-btn offer-details-cta">
+                    <a href="#consultation" class="header-cta-btn offer-details-cta">
                         Замовити перевірку
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#offer-details-arrow)"><path d="M8 8v2.667h11.453L6.667 23.453l1.88 1.88 12.786-12.786V24H24V8z" fill="#fff"/></g><defs><clipPath id="offer-details-arrow"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs></svg>
                     </a>
@@ -214,7 +214,7 @@
             </div>
         </section>
 
-        <section class="inspection-benefits-section container">
+        <section class="inspection-benefits-section container" id="inspection-benefits">
             <h2 class="inspection-benefits-heading">Що ми перевіряємо?</h2>
 
             <div class="inspection-benefits-grid">
@@ -241,6 +241,32 @@
                     <h3 class="inspection-benefit-title">Офіційний акт/звіт</h3>
                     <p class="inspection-benefit-description">Підписаний із переліком виконаних робіт та застосованих приладів (із заводськими номерами). Документ підтверджує, що перевірка проведена належно</p>
                 </article>
+            </div>
+        </section>
+
+        <section class="special-offer-consultation container" id="consultation">
+            <div class="special-offer-consultation__content">
+                <div class="special-offer-consultation__copy">
+                    <span class="special-offer-consultation__eyebrow">Заявка на перевірку</span>
+                    <h2 class="special-offer-consultation__title">Замовте перевірку автомобіля</h2>
+                    <p class="special-offer-consultation__text">Залиште контакти, і ми узгодимо зручний час, формат перевірки та конфіденційні деталі перед оглядом.</p>
+                </div>
+
+                <form class="special-offer-form" action="https://formspree.io/f/mjkraddq" method="POST" id="special-offer-form">
+                    <h3 class="special-offer-form__title">Залиште заявку і ми зв'яжемося з вами</h3>
+                    <input type="hidden" name="source" value="special-offer">
+                    <input type="hidden" name="service" value="Перевірка автомобіля">
+
+                    <div class="special-offer-form__fields">
+                        <input type="text" name="name" placeholder="Ім'я" class="special-offer-form__input" required>
+                        <input type="tel" name="phone" placeholder="Телефон" class="special-offer-form__input" required>
+                        <input type="email" name="email" placeholder="E-mail" class="special-offer-form__input">
+                        <textarea name="message" placeholder="Коментар" class="special-offer-form__textarea"></textarea>
+                    </div>
+
+                    <button type="submit" class="special-offer-form__button">Замовити перевірку</button>
+                    <p class="special-offer-form__status" aria-live="polite"></p>
+                </form>
             </div>
         </section>
 
@@ -319,7 +345,7 @@
 
                 <div class="special-offer-footer__col">
                     <h3 class="special-offer-footer__title">Номер телефону</h3>
-                    <a href="tel:+380933424567" class="special-offer-footer__text special-offer-footer__link">+ 38 (093) 342 45 67</a>
+                    <a href="tel:+380770888000" class="special-offer-footer__text special-offer-footer__link">+ 380 (77) 088 80 00</a>
                 </div>
 
                 <div class="special-offer-footer__col">
@@ -360,5 +386,6 @@
     <script src="../js/burger-menu.js"></script>
     <script src="../js/dropdown-menu.js"></script>
     <script src="../js/faq.js"></script>
+    <script src="../js/special-offer-form.js"></script>
 </body>
 </html>
