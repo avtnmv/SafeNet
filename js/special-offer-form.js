@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setStatus('Заявку відправлено. Ми зв\'яжемося з вами найближчим часом.', 'success');
 
             if (typeof gtag === 'function') {
+                gtag('event', 'form_submit', {
+                    event_category: 'lead',
+                    event_label: 'special_offer',
+                });
                 gtag('event', 'special_offer_form_submit', {
                     event_category: 'lead',
                     event_label: 'special_offer',
