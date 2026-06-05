@@ -81,18 +81,32 @@
         "url": "https://safenet.com.ua",
         "logo": "https://safenet.com.ua/images/logo.webp",
         "image": "https://safenet.com.ua/images/logo.webp",
-        "telephone": "+380770888000",
-        "email": "info@safenet-security.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "UA",
-            "addressLocality": "Україна"
-        },
+        "telephone": [
+            "+380770888000",
+            "+380964444444"
+        ],
+        "email": "info@safenet.org.ua",
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "addressCountry": "UA",
+                "addressLocality": "Одеса",
+                "postalCode": "65022",
+                "streetAddress": "Ванний провулок, 1б"
+            },
+            {
+                "@type": "PostalAddress",
+                "addressCountry": "UA",
+                "addressLocality": "Київ",
+                "postalCode": "02000",
+                "streetAddress": "вулиця Жилянська, 68"
+            }
+        ],
         "sameAs": [
             "https://www.instagram.com/safe.net.security",
             "https://www.facebook.com/share/1AUpwiZ2hr",
             "https://t.me/SafeNet_Security",
-            "https://youtube.com/@safenetsecurity-f4w"
+            "https://www.youtube.com/@SafeNetSecurity1"
         ],
         "serviceArea": {
             "@type": "Country",
@@ -234,11 +248,7 @@
 
             <div class="dropdown-menu" id="dropdown-menu">
                 <ul>
-                    <li><a href="./pages/audit-cyber.html" class="dropdown-link">Аудит та аналіз кібербезпеки</a></li>
-                    <li><a href="./pages/incident-react.html" class="dropdown-link">Реагування на інциденти та кризові ситуації</a></li>
-                    <li><a href="./pages/web-security.html" class="dropdown-link">Захист веб-додатків і сайтів</a></li>
                     <li><a href="./pages/office-check.html" class="dropdown-link">Аудит офiсiв i житла</a></li>
-                    <li><a href="./pages/lan-protect.html" class="dropdown-link">Захист мереж та даних</a></li>
                     <li><a href="./pages/polygraf.html" class="dropdown-link">Перевірка на полiграфi</a></li>
                     <li><a href="./pages/car-protect.html" class="dropdown-link">Захист транспорту від стеження</a></li>
                 </ul>
@@ -262,18 +272,6 @@
                         </div>
                         <div class="burger-dropdown-menu" id="burger-dropdown-menu">
                             <ul>
-                                <li><a href="./pages/audit-cyber.html" class="burger-dropdown-link">
-                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
-                                    Аудит та аналіз кібербезпеки
-                                </a></li>
-                                <li><a href="./pages/lan-protect.html" class="burger-dropdown-link">
-                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
-                                    Захист мереж та даних
-                                </a></li>
-                                <li><a href="./pages/web-security.html" class="burger-dropdown-link">
-                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
-                                    Захист веб-додатків і сайтів
-                                </a></li>
                                 <li><a href="./pages/office-check.html" class="burger-dropdown-link">
                                     <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
                                     Аудит офiсiв i житла
@@ -281,10 +279,6 @@
                                 <li><a href="./pages/polygraf.html" class="burger-dropdown-link">
                                     <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
                                     Перевірка на полiграфi
-                                </a></li>
-                                <li><a href="./pages/incident-react.html" class="burger-dropdown-link">
-                                    <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
-                                    Реагування на інциденти та кризові ситуації
                                 </a></li>
                                 <li><a href="./pages/car-protect.html" class="burger-dropdown-link">
                                     <svg class="burger-dropdown-arrow" width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.158 8.825 3.975 5 .158 1.175 1.333 0l5 5-5 5z" fill="#CBCBCB"/></svg>
@@ -752,15 +746,21 @@
                 </a>
 
                 <div class="footer-column__block">
-                    <a href="mailto:safenese@gmail.com" class="footer-column__link" target="_blank">safenese@gmail.com</a>
+                    <a href="mailto:info@safenet.org.ua" class="footer-column__link" target="_blank">info@safenet.org.ua</a>
                 </div>
 
                 <div class="footer-column__block">
-                    <p class="footer-column__text">Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1а </p>
-                </div>
-
-                <div class="footer-column__block">
+                    <p class="footer-column__text">
+                        Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1б
+                    </p>
                     <a href="tel:+380770888000" class="footer-column__text">+380 (77) 088 80 00</a>
+                </div>
+
+                <div class="footer-column__block">
+                    <p class="footer-column__text">
+                        Україна, 02000, м. Київ, <br> вулиця Жилянська, 68
+                    </p>
+                    <a href="tel:+380964444444" class="footer-column__text">+38 (096) 444 44 44</a>
                 </div>
 
                 <div class="footer-column__socials">
@@ -773,7 +773,7 @@
                     <a href="https://t.me/SafeNet_Security" class="footer-column__social-link" target="_blank">
                         <img src="./img/tg.svg" alt="Telegram">
                     </a>
-                    <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z" class="footer-column__social-link" target="_blank">
+                    <a href="https://www.youtube.com/@SafeNetSecurity1" class="footer-column__social-link" target="_blank">
                         <img src="./img/youtube.svg" alt="YouTube">
                     </a>
                 </div>
@@ -783,14 +783,9 @@
                 <p class="footer-column__title">Всi послуги:</p>
 
                 <div class="footer-column__block footer-column__services">
-                    <a href="./pages/audit-cyber.html">Аудит кібербезпеки</a>
-                    <a href="./pages/lan-protect.html">Захист мереж та даних</a>
-                    <a href="./pages/web-security.html">Безпека веб-ресурсів</a>
                     <a href="./pages/office-check.html">Аудит офісів і житла</a>
-                    <a href="./pages/incident-react.html">Реагування на інциденти та кризові ситуації</a>
                     <a href="./pages/car-protect.html">Захист транспорту від стеження</a>
                     <a href="./pages/polygraf.html">Перевірка на поліграфі</a>
-                    <a href="./pages/lan-protect.html">Захист мереж та даних</a>
                 </div>
             </div>
 
@@ -830,19 +825,19 @@
 
                     <div class="footer-column__block">
                         <p class="footer-column__text-gray">Звʼяжіться з нами:</p>
-                        <a href="mailto:safenese@gmail.com" class="footer-column__link" target="_blank">safenese@gmail.com</a>
+                        <a href="mailto:info@safenet.org.ua" class="footer-column__link" target="_blank">info@safenet.org.ua</a>
                     </div>
 
                     <div class="footer-column__block">
                         <p class="footer-column__text-gray">Адреса:</p>
                         <p class="footer-column__text">
-                            Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1а 
+                            Україна, 65022, Одеська обл., <br> м. Одеса, Ванний провулок, 1б
                         </p>
-                    </div>
-
-                    <div class="footer-column__block">
-                        <p class="footer-column__text-gray">Телефон:</p>
-                        <p class="footer-column__text">+380 (77) 088 80 00</p>
+                        <a href="tel:+380770888000" class="footer-column__text">+380 (77) 088 80 00</a>
+                        <p class="footer-column__text">
+                            Україна, 02000, м. Київ, <br> вулиця Жилянська, 68
+                        </p>
+                        <a href="tel:+380964444444" class="footer-column__text">+38 (096) 444 44 44</a>
                     </div>
                 </div>
 
@@ -867,7 +862,7 @@
                     <a href="https://t.me/SafeNet_Security" class="footer-column__social-link" target="_blank">
                         <img src="./img/tg.svg" alt="Telegram">
                     </a>
-                    <a href="https://youtube.com/@safenetsecurity-f4w?si=6m1PNarJZ1grg95Z" class="footer-column__social-link" target="_blank">
+                    <a href="https://www.youtube.com/@SafeNetSecurity1" class="footer-column__social-link" target="_blank">
                         <img src="./img/youtube.svg" alt="YouTube">
                     </a>
                 </div>
@@ -876,14 +871,9 @@
             <div class="footer__mobile-services">
                 <p class="footer-column__title">Всi послуги:</p>
                 <div class="footer-column__block footer-column__services">
-                    <a href="./pages/audit-cyber.html">Аудит кібербезпеки</a>
-                    <a href="./pages/lan-protect.html">Захист мереж та даних</a>
-                    <a href="./pages/web-security.html">Безпека веб-ресурсів</a>
                     <a href="./pages/office-check.html">Аудит офісів і житла</a>
-                    <a href="./pages/incident-react.html">Реагування на інциденти та кризові ситуації</a>
                     <a href="./pages/car-protect.html">Захист транспорту від стеження</a>
                     <a href="./pages/polygraf.html">Перевірка на поліграфі</a>
-                    <a href="./pages/lan-protect.html">Захист мереж та даних</a>
                 </div>
             </div>
 
