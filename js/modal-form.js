@@ -468,11 +468,28 @@ class ModalForm {
             return;
         }
         
+        const url = new URL(window.location.href);
+        const path = url.pathname;
+        const isPolygraphPage = path.includes('polygraf');
+        const pageSlug = path.split('/').pop()?.replace('.html', '') || 'home';
+        const source = isPolygraphPage ? 'polygraf' : pageSlug;
+        const service = isPolygraphPage ? 'Поліграф' : source;
+
         // Если валидация прошла успешно, отправляем данные на Formspree через Fetch API
         const formData = {
             firstName: firstName,
             phone: phone,
-            email: email
+            email: email,
+            source: source,
+            service: service,
+            page: pageSlug,
+            pageUrl: url.href,
+            formType: 'modal_form',
+            utm_source: url.searchParams.get('utm_source') || '',
+            utm_medium: url.searchParams.get('utm_medium') || '',
+            utm_campaign: url.searchParams.get('utm_campaign') || '',
+            utm_content: url.searchParams.get('utm_content') || '',
+            utm_term: url.searchParams.get('utm_term') || ''
         };
         
         // Показываем индикатор загрузки
@@ -499,16 +516,22 @@ class ModalForm {
                 // Отслеживаем событие для аналитики
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'form_submit', {
-                        event_category: 'engagement',
-                        event_label: 'modal_form_submit'
+                        event_category: 'lead',
+                        event_label: formData.source
                     });
+                    if (formData.source === 'polygraf') {
+                        gtag('event', 'polygraph_lead', {
+                            event_category: 'lead',
+                            event_label: formData.formType
+                        });
+                    }
                 }
 
                 // Facebook Pixel событие
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead', {
-                        content_name: 'Modal Form Submitted',
-                        content_category: 'Lead Generation'
+                        content_name: formData.source,
+                        content_category: formData.service
                     });
                 }
             } else {
